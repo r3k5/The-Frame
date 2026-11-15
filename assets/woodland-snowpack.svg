@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <!-- Snow cover for the banks and ground during snowfall. -->
+  <defs>
+    <linearGradient id="drift" x2="0" y2="1"><stop stop-color="#cfdfdf"/><stop offset="1" stop-color="#7a9daa"/></linearGradient>
+    <symbol id="snowy-boughs" viewBox="0 0 80 200">
+      <path d="M38 0 24 39l9-4-4 11 9-4 10 2-3-10 8 4ZM30 49 16 74l11-3 7 2 9-5 12 3 7 2-15-20 1 11-10-6-9 4Zm-9 35L8 110l15-5 15 2 9-7 12 3 7 4-14-24-4 13-12-5-14 7Zm-4 29L0 153l18-8 13-2 16 2 10-7 19 8-16-27-7 14-12-7-10 8-13-3Z"/>
+    </symbol>
+  </defs>
+  <g fill="url(#drift)">
+    <path d="M0 822q150-61 258-62c144-1 297 36 407 57 104 19 195 45 261 79q-93 11-222-17c-105-25-185-41-292-33-92 7-198 10-299 31Q40 891 0 901Z"/>
+    <path d="M0 938c142-67 338-112 529-52 88 28 140 55 197 81-72 6-118-9-207-28-132-34-229-25-328 2C96 964 57 991 0 1006Z"/>
+    <path d="M300 693c124-32 185-41 283-20 97 22 243 9 337-5l35 11c-146 24-239 26-351 10-97-15-211-6-304 16Z"/>
+    <path d="M1418 742c112-61 183-78 280-109l222 32v62c-81-21-199-19-262-9-107 17-173 29-240 24Z"/>
+    <path d="M1502 915c96-50 201-50 328-22l90 32v61c-130-58-269-59-407-37l-76 37Z"/>
+  </g>
+  <g fill="#cfdfde">
+    <use xlink:href="#snowy-boughs" x="-40" y="340" width="190" height="478"/>
+    <use xlink:href="#snowy-boughs" x="88" y="358" width="142" height="356"/>
+    <use xlink:href="#snowy-boughs" x="228" y="455" width="105" height="263"/>
+    <use xlink:href="#snowy-boughs" x="341" y="474" width="84" height="211"/>
+    <use xlink:href="#snowy-boughs" x="795" y="407" width="30" height="76"/>
+    <use xlink:href="#snowy-boughs" x="856" y="400" width="32" height="82"/>
+    <use xlink:href="#snowy-boughs" x="940" y="415" width="35" height="88"/>
+    <use xlink:href="#snowy-boughs" x="1190" y="424" width="34" height="86"/>
+    <use xlink:href="#snowy-boughs" x="1480" y="421" width="36" height="91"/>
+    <use xlink:href="#snowy-boughs" x="1554" y="399" width="39" height="99"/>
+    <use xlink:href="#snowy-boughs" x="1515" y="536" width="81" height="204"/>
+    <use xlink:href="#snowy-boughs" x="1580" y="573" width="126" height="317"/>
+    <use xlink:href="#snowy-boughs" x="1665" y="345" width="153" height="384"/>
+    <use xlink:href="#snowy-boughs" x="1866" y="290" width="187" height="470"/>
+  </g>
+</svg>

@@ -1,0 +1,591 @@
+/* R3K5 layout, Woodland scenes, and TV-specific styling. */
+:root {
+  --edition-ink: #11151d;
+  --edition-paper: #eee9e1;
+  --edition-muted: #adb0c0;
+  --edition-violet: #b69bdc;
+  --edition-rule: #b8b0cd26;
+}
+html, body, #stage { background: var(--edition-ink); color: var(--edition-paper); }
+button, h1, h2, h3, .eyebrow, .setting-label { text-transform: capitalize; }
+.app-monogram, .version-number { text-transform: none; }
+button:focus, a:focus { outline: 2px solid #d5baf7; outline-offset: 6px; }
+.shade { background: linear-gradient(90deg, #11151d80, #11151d00 65%), linear-gradient(0deg, #11151d 5%, #11151df0 27%, #11151d00 53%); }
+header { top: 51px; height: 80px; left: 94px; right: 94px; border-bottom: 1px solid var(--edition-rule); padding-bottom: 27px; }
+.brand { font-size: 23px; letter-spacing: 6px; }
+.frame-mark { width: 26px; height: 31px; border-color: #e9e0ef; border-right-color: #9d79c4; margin-right: 17px; }
+.frame-mark:after { border-color: #ae91d0; inset: 6px; }
+.brand-note { border-left: 1px solid #aba1bf40; padding-left: 24px; margin-left: 27px; width: 155px; font-size: 11px; letter-spacing: 2px; color: #d5c4e8; }
+.brand-note span { display: block; font-size: 9px; letter-spacing: 3px; margin-top: 4px; color: #9b9daf; }
+nav { margin-right: 45px; gap: 23px; }
+.nav { font-size: 18px; border-radius: 0; padding: 13px 9px; color: #aeb0c0; }
+.nav.active { background: transparent; color: #f5eef9; box-shadow: 0 2px #b69bdc; }
+.icon-button { margin-right: 33px; width: 39px; height: 39px; }
+.time-block { min-width: 137px; }
+#clock { font-size: 29px; letter-spacing: 0; font-variant-numeric: tabular-nums; }
+#clock small { color: #aeb0c0; font-size: 11px; }
+#date { color: #9c9eae; font-size: 12px; letter-spacing: .7px; }
+main { top: 183px; }
+.hero { height: 443px; padding-top: 30px; }
+.eyebrow { color: var(--edition-violet); font-size: 12px; letter-spacing: 3px; gap: 14px; }
+.eyebrow:before { background: #ab90cf; width: 24px; }
+.hero h1 { font-family: Arial, Helvetica, sans-serif; font-size: 92px; line-height: 1.05; font-weight: 400; letter-spacing: -5px; margin: 32px 0 23px; }
+.hero h1 span { color: #b8aac9; font-weight: 300; }
+.hero p { font-size: 18px; color: #aeb0be; letter-spacing: .1px; }
+.orbit-label { position: absolute; top: 23px; right: 0; color: #a0a0b1; font-size: 10px; letter-spacing: 2.5px; writing-mode: vertical-rl; }
+.section-heading { border-top: 1px solid var(--edition-rule); padding-top: 22px; margin-bottom: 23px; }
+.section-heading h2 { font-size: 17px; color: #d4cedc; letter-spacing: .5px; }
+.section-heading button { color: #b7adca; font-size: 14px; }
+.app-row { gap: 20px; justify-content: space-between; padding: 19px 20px 20px; background: #20222d85; border: 1px solid #b3a7c51c; border-radius: 15px; }
+.app-row .app-card { width: 206px; border-radius: 8px; }
+.app-row .streamforge-card { width: 328px; }
+.app-art { box-shadow: none; border-radius: 8px; }
+.app-row .app-art { height: 112px; }
+.app-label { color: #b7b4c2; font-size: 14px; margin-top: 14px; }
+.app-row .app-label { display: flex; align-items: center; justify-content: space-between; }
+.app-number { color: #716c80; font-family: monospace; font-size: 10px; letter-spacing: 2px; }
+.app-number:after { content: attr(data-number); }
+.app-art.streamforge { background: linear-gradient(115deg, #38294d, #272237); border: 1px solid #ab8ed03b; }
+.app-row .app-art.streamforge { flex-direction: row; gap: 16px; }
+.app-row .streamforge .app-monogram { font-size: 27px; }
+.app-row .streamforge img { width: 49px; height: 49px; }
+.streamforge .forge-name { color: #ad8df4; }
+.app-art.netflix { background: #2b2429; color: #e96e79; }
+.app-art.youtube { background: #ddd9d5; }
+.app-art.prime { background: #263340; color: #c9d9e2; }
+.app-art.disney { background: #292d42; color: #d5d8e9; }
+.app-art.plex { background: #342f2c; color: #d6bf92; }
+.app-art.more { background: #ffffff03; border-color: #b7a7ce26; }
+.app-art.netflix .app-monogram { font-size: 32px; }
+.app-monogram { font-size: 25px; }
+.section-note { font-size: 11px; margin-top: 20px; color: #858798; letter-spacing: .5px; }
+footer { border-color: var(--edition-rule); bottom: 40px; padding-top: 21px; color: #8e8c9f; font-size: 11px; }
+footer>div:first-child { width: 480px; }
+.status-dot { background: #aa8ccc; }
+.key { border-color: #a89abd3d; font-size: 10px; }
+.footer-brand { color: #a69bb7; letter-spacing: 2px; font-size: 10px; }
+.footer-slash { color: #6e5c85; margin: 0 13px; }
+.page-heading h1 { font-family: Arial, Helvetica, sans-serif; font-size: 58px; letter-spacing: -2px; }
+.page-heading p { color: #aca9bb; font-size: 17px; }
+.input-card { background: #282735ad; border-color: #b5a0d332; }
+.input-card span, .empty { color: #b9afc7; }
+.text-button { background: #d5c6e7; color: #21192c; }
+#modal-layer { background: #0a0b12c9; }
+#modal { background: #20202c; }
+#modal h2 { font-family: Arial, Helvetica, sans-serif; font-size: 38px; letter-spacing: -1px; }
+#modal p { color: #b2a9bf; }
+.setting-label { color: #afa0c3; }
+.setting-choice { background: #2d2a3b; }
+.setting-choice.selected { border-color: #bc9ddd; }
+.setting-choice.selected:after { color: #d6b9f3; }
+.secondary { background: #3a344a; color: #e1d6ed; }
+#toast { background: #e6dcef; color: #261d31; }
+#leave-woodland { background: #1b192ad9; }
+.pin-indicator { color: #c5a1f0; }
+
+/* Office controls and market display. */
+nav { gap: 17px; margin-right: 30px; }
+#theme-status { margin-left: 16px; padding-left: 16px; border-left: 1px solid var(--edition-rule); }
+.hero h1 { font-size: 85px; }
+.office-actions { display: flex; gap: 13px; margin-top: 24px; }
+.office-actions .text-button { font-size: 17px; padding: 13px 22px; }
+.office-panel { position: absolute; right: 0; top: 22px; width: 720px; padding: 29px 34px; border: 1px solid #b4a3d135; border-radius: 12px; background: #1b1d29e6; }
+.office-panel h2 { font-size: 34px; font-weight: 400; letter-spacing: -1px; margin: 20px 0 23px; }
+.home-symbols { display: flex; gap: 17px; }
+.home-symbols>div { flex: 1; border-left: 1px solid #ad99c63b; padding-left: 17px; }
+.home-symbols strong { font-size: 25px; font-weight: 400; }
+.home-symbols small { display: block; color: #9892aa; font-size: 10px; letter-spacing: 1.5px; margin-top: 8px; }
+.app-art.hulu { color: #86cdaa; background: #24362f; }
+.app-art.streamforge { color: #eee9e1; }
+.app-art.peacock { color: #e2dfd8; background: #29282d; }
+.app-art.tvplus { color: #c2cde9; background: #293047; }
+.tvplus .app-monogram { font-size: 23px; max-width: 160px; text-align: center; }
+[data-page="markets"] .landscape { opacity: .17; }
+.market-clock { position: absolute; right: 0; top: 60px; font-size: 35px; font-variant-numeric: tabular-nums; }
+.market-toolbar { display: flex; gap: 13px; margin: 0 0 22px; }
+.market-toolbar .text-button { padding: 13px 22px; font-size: 16px; }
+.market-grid { display: grid; gap: 22px; height: 430px; }
+.market-card { position: relative; border: 1px solid #b3a0ce30; border-radius: 12px; padding: 23px 22px 12px; background: #181b24; overflow: hidden; }
+.market-card h2 { font-size: 24px; font-weight: 400; margin: 0 0 5px; }
+.market-exchange { position: absolute; top: 31px; right: 24px; font-size: 11px; color: #a19aac; letter-spacing: 1px; }
+.market-chart { width: 100%; height: calc(100% - 35px); border: 0; display: block; }
+.market-note { display: flex; align-items: center; justify-content: space-between; margin-top: 17px; color: #aaa2b8; font-size: 12px; }
+.market-note button { background: transparent; color: #c9b6e0; padding: 8px 0; font-size: 13px; }
+.market-fullscreen header,.market-fullscreen footer { display: none; }
+.market-fullscreen main { top: 42px; bottom: 35px; }
+.market-fullscreen .market-grid { height: 620px; }
+.market-fullscreen .market-clock { top: 50px; }
+.watchlist-label { display: block; font-size: 15px; color: #bfb2cf; margin-top: 26px; }
+.watchlist-input { display: block; width: 100%; padding: 17px 18px; font: 22px monospace; color: #eee7f3; border: 1px solid #b49bce55; border-radius: 7px; background: #2b2837; margin-top: 12px; }
+.watchlist-input:focus { outline: 2px solid #c9a7ec; outline-offset: 4px; }
+.zip-edit { text-align: left; }
+.form-error { min-height: 24px; }
+
+/* Office and evening both use dark interfaces, with different scenery and accents. */
+[data-theme="day"] { --edition-ink: #11181c; --edition-paper: #e5e9e5; --edition-rule: #a3bbb526; --edition-violet: #b0c4bc; }
+#stage {
+  --office-shade: linear-gradient(180deg,#11181c9e,transparent 32%),linear-gradient(0deg,#11181ce6 5%,#11181c73 34%,transparent 68%);
+  --evening-shade: linear-gradient(0deg,#11151dde 0%,#11151d40 34%,transparent 70%);
+  --woodland-night-shade: radial-gradient(ellipse 24% 31% at 40.625% 7.4%,transparent 9%,#08152a24 38%,#06102385 100%),
+    linear-gradient(180deg,transparent 10%,#09182b3d 26%,#08142569 54%,#040a125e 100%);
+}
+[data-theme="day"] .shade { background: var(--office-shade); }
+[data-theme="day"] .brand-note { color: #b8cbc4; }
+[data-theme="day"] .frame-mark:after { border-color: #a2b8ad; }
+[data-theme="day"] .nav.active { box-shadow: 0 2px #a3bcb0; }
+[data-theme="day"] .hero h1 span { color: #b6c4c0; }
+[data-theme="day"] .hero p { color: #a8b5b0; }
+[data-theme="day"] .office-panel { background: #1b2529e8; border-color: #a1b8ae30; }
+[data-theme="day"] .app-row { background: #1c2529b0; border-color: #a3bbb51f; }
+[data-theme="day"] .section-heading h2 { color: #c4d0cb; }
+[data-theme="day"] .text-button { background: #bdcfc4; color: #17231d; }
+[data-theme="day"] .secondary { background: #2d3c38; color: #d6e0d9; }
+[data-theme="day"] .status-dot { background: #b4c8ba; }
+[data-theme="day"] .market-card { background: #171f24; border-color: #a1b8ae26; }
+[data-theme="day"] button:focus,[data-theme="day"] a:focus { outline-color: #c4d9cc; }
+[data-theme="night"] .office-panel { background: #1b1d29cc; }
+.woodland-view .landscape { opacity: 1; }
+
+/* Weather, app preview, and the home dock. */
+.weather-summary { display: flex; align-items: center; justify-content: flex-end; background: transparent; text-align: right; min-width: 186px; margin-right: 30px; padding: 9px 0; }
+#weather-place { display: block; color: #c9c5cd; font-size: 12px; margin-bottom: 7px; }
+#weather-value { display: block; color: #e3dcea; font-size: 15px; }
+.weather-icon { width: 36px; height: 36px; margin-right: 12px; flex-shrink: 0; }
+.weather-icon[hidden], .weather-icon > * { display: none; }
+.weather-icon[data-condition="clear"][data-light="day"] .weather-sun,
+.weather-icon[data-condition="partly"][data-light="day"] .weather-sun,
+.weather-icon[data-condition="clear"][data-light="night"] .weather-moon,
+.weather-icon[data-condition="partly"][data-light="night"] .weather-moon,
+.weather-icon[data-condition]:not([data-condition="clear"]) .weather-cloud,
+.weather-icon[data-condition="rain"] .weather-rain,
+.weather-icon[data-condition="storm"] .weather-bolt,
+.weather-icon[data-condition="snow"] .weather-snow,
+.weather-icon[data-condition="fog"] .weather-fog { display: inline; }
+.weather-sun { transform-origin: 20px 20px; animation: weather-sun 28s linear infinite; }
+.weather-moon { animation: weather-drift 5s ease-in-out infinite alternate; }
+.weather-icon[data-condition="partly"] .weather-sun,
+.weather-icon[data-condition="partly"] .weather-moon { transform: translate(-4px, -6px) scale(.72); transform-origin: center; animation: none; }
+.weather-cloud { animation: weather-drift 4s ease-in-out infinite alternate; }
+.weather-rain path, .weather-snow circle { animation: weather-fall 1.5s linear infinite; }
+.weather-rain path:nth-child(2), .weather-snow circle:nth-child(2) { animation-delay: -.5s; }
+.weather-rain path:nth-child(3), .weather-snow circle:nth-child(3) { animation-delay: -1s; }
+.weather-bolt, .weather-fog { animation: weather-gleam 3.5s ease-in-out infinite alternate; }
+@keyframes weather-sun { to { transform: rotate(360deg); } }
+@keyframes weather-drift { to { transform: translateX(2px); } }
+@keyframes weather-fall { 0% { opacity: 0; transform: translateY(-2px); } 30% { opacity: 1; } 100% { opacity: 0; transform: translateY(5px); } }
+@keyframes weather-gleam { to { opacity: .55; } }
+.weather-large { font-size: 65px; letter-spacing: -3px; margin-top: 20px; }
+nav { gap: 11px; }
+.preview-panel.office-panel { top: 18px; width: 520px; padding: 0; overflow: hidden; }
+.preview-kicker { font-size: 10px; letter-spacing: 2px; color: #b8a5ce; padding: 16px 23px; border-bottom: 1px solid #ab98ca26; }
+.preview-visual { height: 240px; background: radial-gradient(ellipse at 50% 40%,#433553,#222130); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 15px; position: relative; }
+.preview-wordmark { font-size: 40px; letter-spacing: -1px; order: 2; }
+.preview-icon { width: 62px; height: 62px; object-fit: contain; order: 1; }
+.preview-details { display: flex; align-items: center; justify-content: space-between; gap: 22px; padding: 16px 22px; }
+.preview-details p { color: #b2a6bf; font-size: 12px; line-height: 1.5; max-width: 410px; }
+.preview-details .text-button { font-size: 13px; padding: 13px 17px; white-space: nowrap; }
+.preview-video { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.preview-waiting { padding: 50px; font-size: 20px; }
+.app-row { gap: 16px; }
+.app-row .app-card { width: auto; flex: 0 1 180px; min-width: 0; }
+.app-row .streamforge-card { flex-basis: 260px; }
+.app-row .streamforge .app-monogram { font-size: 24px; }
+.app-row .streamforge img { width: 43px; height: 43px; }
+.app-art.livenow { color: #f5e9e9; background: #5a2635; }
+.livenow .app-monogram { font-size: 23px; line-height: 1.15; text-align: center; max-width: 145px; }
+[data-theme="day"] .preview-visual { background: radial-gradient(ellipse at 50% 40%,#344841,#1c2a2a); }
+[data-theme="day"] .preview-kicker { color: #b9cbbd; }
+[data-theme="day"] #weather-value { color: #d8e5dc; }
+
+/* The home screen puts market data and the app preview above a clean dock. */
+main { top: 160px; bottom: 55px; }
+[data-page="home"] .hero { height: 310px; padding-top: 0; }
+.home-market-panel { position: absolute; left: 0; top: 18px; width: 620px; height: 274px; padding: 21px 24px; display: flex; flex-direction: column; color: #f5faff; background: #121a25; border: 1px solid #52677d; border-radius: 12px; }
+.home-market-heading { display: flex; align-items: center; justify-content: space-between; min-height: 30px; }
+.hero .home-market-heading h1 { font-family: Arial, Helvetica, sans-serif; font-size: 24px; line-height: 1.2; letter-spacing: -.5px; font-weight: 400; margin: 0; }
+.home-market-controls { display: flex; align-items: center; }
+.home-market-controls > * + * { margin-left: 10px; }
+.home-market-panel .home-market-controls button { padding: 7px 11px; border-radius: 7px; font-size: 15px; }
+.home-market-panel .home-market-controls button,
+.home-market-panel .home-symbol-tab,
+.home-market-panel .home-portfolio-ranges button,
+.home-market-panel .text-button.secondary { color: #f5faff; background: #263a50; border: 1px solid #7291ac; }
+.home-market-tabs { display: flex; flex: 1; align-items: center; }
+.home-symbol-tab { border-radius: 7px; min-width: 105px; padding: 10px 18px; font-size: 17px; text-align: center; }
+.home-quotes { position: relative; margin: 13px 0 4px; height: 56px; background: #10141e; border: 1px solid #637b91; border-radius: 8px; overflow: hidden; }
+.home-ticker { display: block; width: 100%; height: 100%; border: 0; pointer-events: none; }
+.home-portfolio-summary { display: flex; align-items: baseline; margin: 6px 0 2px; }
+#portfolio-status { font-size: 32px; line-height: 1.2; font-variant-numeric: tabular-nums; }
+#portfolio-change { margin-left: 14px; font-size: 16px; font-weight: 600; }
+#portfolio-change[data-direction="up"] { color: #8bf2cf; }
+#portfolio-change[data-direction="down"] { color: #ffb2b4; }
+#portfolio-chart { display: block; flex-shrink: 0; width: 100%; height: 108px; margin: 3px 0 8px; background: #0b131e; border-radius: 6px; }
+#portfolio-chart text { fill: #dce9f4; font: 14px Arial, Helvetica, sans-serif; font-variant-numeric: tabular-nums; }
+.portfolio-chart-grid { fill: none; stroke: #536d83; stroke-width: 1; }
+#portfolio-chart polyline { fill: none; stroke: #83f2ce; stroke-width: 3; stroke-linejoin: round; stroke-linecap: round; }
+.home-portfolio-footer { display: flex; align-items: center; justify-content: space-between; min-height: 32px; }
+#portfolio-detail { font-size: 14px; color: #d7e4ef; }
+.home-portfolio-ranges { display: flex; flex-shrink: 0; margin-left: 10px; }
+.home-portfolio-ranges button { padding: 5px 7px; min-width: 36px; font-size: 14px; font-weight: 600; border-radius: 5px; }
+.home-portfolio-ranges button + button { margin-left: 5px; }
+.home-market-panel .home-portfolio-ranges button[aria-pressed="true"] { color: #112e2a; background: #a7f4db; border-color: #a7f4db; }
+.home-market-panel .office-actions { margin-top: 8px; }
+.home-market-panel .text-button { padding: 11px 17px; font-size: 15px; background: #dcecf9; color: #15283c; }
+.preview-panel.office-panel { height: 274px; display: flex; flex-direction: column; }
+.preview-panel .preview-visual { flex: 1; min-height: 0; height: auto; }
+.preview-actions { display: flex; }
+.preview-actions > * + * { margin-left: 10px; }
+.preview-panel .preview-details { min-height: 80px; }
+.app-actions { display: flex; gap: 26px; }
+.app-card.is-moving { outline: 3px dashed #dec2f7; outline-offset: 7px; transform: translateY(-8px); }
+.reorder-title { padding: 40px 32px 0; font-size: 34px; }
+.reorder-help { padding: 0 32px; font-size: 20px; line-height: 1.6; color: #c4b6cf; }
+.art-actions { display: flex; margin: -7px 0 29px; }
+.art-actions > * + * { margin-left: 12px; }
+[data-theme="day"] .app-card.is-moving { outline-color: #c4d9cc; }
+
+/* The Frame's Chromium M85 does not support the inset shorthand. */
+.landscape, .shade, #modal-layer, .preview-video { top: 0; right: 0; bottom: 0; left: 0; }
+.frame-mark:after { top: 6px; right: 6px; bottom: 6px; left: 6px; }
+/* Use raster backdrops on the TV and SVG fragments in the browser preview. */
+[data-theme="day"] .landscape { background-image: url('assets/woodland.svg#day'); }
+.native-tv[data-theme="day"] .landscape { background-image: url('assets/woodland-day-tv.png'); }
+.native-tv[data-theme="night"] .landscape { background-image: url('assets/woodland-tv.png'); }
+[data-page="home"][data-sky="overcast"][data-theme="day"]:not(.woodland-view) .landscape { background-image: url('assets/woodland.svg#overcast-day'); }
+[data-page="home"][data-sky="overcast"][data-theme="night"]:not(.woodland-view) .landscape { background-image: url('assets/woodland.svg#overcast-night'); }
+.native-tv[data-page="home"][data-sky="overcast"][data-theme="day"]:not(.woodland-view) .landscape { background-image: url('assets/woodland-overcast-day-tv.png'); }
+.native-tv[data-page="home"][data-sky="overcast"][data-theme="night"]:not(.woodland-view) .landscape { background-image: url('assets/woodland-overcast-night-tv.png'); }
+/* Fade the backdrops while the sun and moon move on their own layer. */
+.woodland-transition, .woodland-celestial, .woodland-fireflies,
+[data-transition] .shade::before, [data-transition] .shade::after {
+  position: absolute; top: 0; right: 0; bottom: 0; left: 0; pointer-events: none;
+}
+.woodland-transition { display: none; background: center / cover no-repeat; }
+[data-transition="dusk"] .woodland-transition { background-image: url('assets/woodland.svg#night-backdrop'); }
+.native-tv[data-transition="dusk"] .woodland-transition { background-image: url('assets/woodland-tv.png'); }
+[data-transition="dusk"][data-sky="overcast"] .woodland-transition { background-image: url('assets/woodland.svg#overcast-night'); }
+.native-tv[data-transition="dusk"][data-sky="overcast"] .woodland-transition { background-image: url('assets/woodland-overcast-night-tv.png'); }
+[data-transition="dawn"] .woodland-transition { background-image: url('assets/woodland.svg#day'); }
+.native-tv[data-transition="dawn"] .woodland-transition { background-image: url('assets/woodland-day-tv.png'); }
+[data-transition="dawn"][data-sky="overcast"] .woodland-transition { background-image: url('assets/woodland.svg#overcast-day'); }
+.native-tv[data-transition="dawn"][data-sky="overcast"] .woodland-transition { background-image: url('assets/woodland-overcast-day-tv.png'); }
+[data-page="home"][data-theme="night"]:not(.woodland-view) .landscape::before,
+[data-transition="dusk"] .woodland-transition::before {
+  content: ''; position: absolute; top: 0; right: 0; bottom: 0; left: 0;
+  background: var(--woodland-night-shade); pointer-events: none;
+}
+[data-transition] .woodland-transition { display: block; }
+[data-transition] .woodland-transition, [data-transition] .shade::after { animation: woodland-fade-in 600s linear var(--transition-offset, 0s) both; }
+#stage[data-transition] .shade { background: none; }
+[data-transition] .shade::before { content: ''; background: var(--office-shade); animation: woodland-fade-out 600s linear var(--transition-offset, 0s) both; }
+[data-transition] .shade::after { content: ''; background: var(--evening-shade); }
+[data-transition="dawn"] .shade::before { background: var(--evening-shade); }
+[data-transition="dawn"] .shade::after { background: var(--office-shade); }
+@keyframes woodland-fade-in { from { opacity: 0; } to { opacity: 1; } }
+@keyframes woodland-fade-out { from { opacity: 1; } to { opacity: 0; } }
+
+.woodland-celestial { width: 100%; height: 100%; --mountain-pass: translate(755px, 344px); }
+.woodland-sun { --sky-position: translate(694px, 81px); }
+.woodland-moon { --sky-position: translate(780px, 80px); }
+.woodland-sun, .woodland-moon { display: none; transform: var(--sky-position); }
+[data-theme="day"] .woodland-sun, [data-theme="night"] .woodland-moon,
+[data-transition] .woodland-sun, [data-transition] .woodland-moon { display: inline; }
+.veiled-moon { display: none; }
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .woodland-celestial .sun-disk,
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .woodland-celestial .sun-rays,
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .woodland-celestial .moon-disk,
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .woodland-celestial .moon-halo { display: none; }
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .veiled-moon { display: inline; }
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .woodland-sun { opacity: .45; }
+[data-transition="dusk"] .woodland-sun, [data-transition="dawn"] .woodland-moon {
+  animation: woodland-set 600s linear var(--transition-offset, 0s) both;
+}
+[data-transition="dusk"] .woodland-moon, [data-transition="dawn"] .woodland-sun {
+  animation: woodland-rise 600s linear var(--transition-offset, 0s) both;
+}
+[data-transition="dusk"] .woodland-sun .celestial-glow, [data-transition="dawn"] .woodland-moon .celestial-glow {
+  animation: woodland-glow-out 600s linear var(--transition-offset, 0s) both;
+}
+[data-transition="dusk"] .woodland-moon .celestial-glow, [data-transition="dawn"] .woodland-sun .celestial-glow {
+  animation: woodland-glow-in 600s linear var(--transition-offset, 0s) both;
+}
+@keyframes woodland-set { 0% { transform: var(--sky-position); } 50%,100% { transform: var(--mountain-pass); } }
+@keyframes woodland-rise { 0%,50% { transform: var(--mountain-pass); } 100% { transform: var(--sky-position); } }
+@keyframes woodland-glow-out { 0%,40% { opacity: 1; } 50%,100% { opacity: 0; } }
+@keyframes woodland-glow-in { 0%,50% { opacity: 0; } 60%,100% { opacity: 1; } }
+.woodland-fireflies { display: none; width: 100%; height: 100%; }
+[data-page="home"][data-theme="night"] .woodland-fireflies,
+[data-transition="dusk"] .woodland-fireflies, .woodland-view[data-theme="night"] .woodland-fireflies { display: block; }
+[data-page="home"][data-sky="overcast"]:not(.woodland-view) .woodland-fireflies { display: none; }
+[data-transition="dusk"] .woodland-fireflies { animation: woodland-glow-in 600s linear var(--transition-offset, 0s) both; }
+[data-transition="dawn"] .woodland-fireflies { animation: woodland-glow-out 600s linear var(--transition-offset, 0s) both; }
+.woodland-fireflies > g { --fly-x: 16px; --fly-y: -12px; --fly-drift: 9s; --fly-pulse: 4.7s; --fly-delay: -2s; }
+.woodland-fireflies > g:nth-of-type(2n) { --fly-x: -15px; --fly-y: -7px; --fly-drift: 11s; --fly-pulse: 5.4s; --fly-delay: -5s; }
+.woodland-fireflies > g:nth-of-type(3n) { --fly-x: 9px; --fly-y: 11px; --fly-drift: 8s; --fly-pulse: 4.1s; --fly-delay: -7s; }
+.woodland-fireflies use {
+  animation: firefly-drift var(--fly-drift) ease-in-out var(--fly-delay) infinite,
+    firefly-pulse var(--fly-pulse) ease-in-out var(--fly-delay) infinite;
+}
+@keyframes firefly-drift {
+  0%,100% { transform: translate(0, 0); }
+  42% { transform: translate(var(--fly-x), var(--fly-y)); }
+  74% { transform: translate(0, var(--fly-y)); }
+}
+@keyframes firefly-pulse { 0%,100% { opacity: .24; } 46%,64% { opacity: .96; } }
+.woodland-view .woodland-fireflies use { animation: none; opacity: .72; }
+/* Draw weather above the backdrop and below the controls. */
+.woodland-weather { position: absolute; top: 0; right: 0; bottom: 0; left: 0; overflow: hidden; display: none; pointer-events: none; }
+[data-page="home"]:not(.woodland-view) .woodland-weather { display: block; }
+.woodland-weather > div, .woodland-pine-snow { display: none; }
+.woodland-clouds { --cloud-texture: url('assets/woodland-overcast-clouds.png'); position: absolute; top: 0; left: 0; right: 0; height: 260px; opacity: .86; }
+.woodland-clouds::before, .woodland-clouds::after { content: ''; position: absolute; left: 0; top: 0; width: 2280px; height: 100%; background: var(--cloud-texture) center / 100% 100% no-repeat; animation: woodland-cloud-pass 168s linear infinite; }
+.woodland-clouds::before { animation-delay: -28s; }
+.woodland-clouds::after { animation-delay: -112s; }
+[data-weather="partly"] .woodland-clouds { --cloud-texture: url('assets/woodland-clouds-day.png'); display: block; top: 22px; height: 212px; opacity: .89; }
+[data-sky="overcast"] .woodland-clouds { display: block; }
+/* Repeat the stitched cloud texture as a single layer so its join keeps the same opacity. */
+[data-sky="overcast"] .woodland-clouds::before {
+  width: 4200px; background: var(--cloud-texture) left top / 2280px 100% repeat-x;
+  animation: woodland-overcast-pass 88s linear -28s infinite;
+}
+[data-sky="overcast"] .woodland-clouds::after { display: none; }
+[data-weather="fog"] .woodland-clouds { top: 255px; opacity: .32; }
+[data-weather="rain"] .woodland-clouds, [data-weather="storm"] .woodland-clouds { opacity: .78; }
+[data-theme="night"][data-sky="overcast"] .woodland-clouds { opacity: .39; }
+[data-theme="night"][data-weather="partly"] .woodland-clouds { --cloud-texture: url('assets/woodland-clouds-night.png'); opacity: .54; }
+.woodland-storm-light { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: linear-gradient(180deg,#121b36a0,#121b3633 56%,transparent); }
+[data-weather="rain"] .woodland-storm-light, [data-weather="storm"] .woodland-storm-light { display: block; }
+[data-weather="storm"] .woodland-storm-light::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 460px; background: radial-gradient(ellipse at 65% 5%,#a4c0eb6e,transparent 65%); opacity: 0; animation: woodland-lightning 23s linear infinite; }
+[data-scene-review][data-weather="storm"] .woodland-storm-light::before { animation-duration: 13s; }
+.woodland-precipitation { position: absolute; top: -260px; left: -30px; width: 2000px; height: 1360px; background-repeat: repeat; }
+[data-weather="rain"] .woodland-precipitation, [data-weather="storm"] .woodland-precipitation { display: block; background-image: url('assets/woodland-rain.svg'); background-size: 240px 220px; opacity: .68; animation: woodland-rain .71s linear infinite; }
+[data-weather="storm"] .woodland-precipitation { opacity: .87; }
+[data-weather="snow"] .woodland-precipitation { display: block; background-image: url('assets/woodland-flakes.svg'); background-size: 300px 260px; opacity: .72; animation: woodland-snow 8s linear infinite; }
+.woodland-snow-cover { position: absolute; top: 0; right: 0; bottom: 0; left: 0; background: url('assets/woodland-snowpack.svg') center / cover no-repeat; opacity: .87; }
+[data-sky][data-weather="snow"][data-page="home"]:not(.woodland-view) .woodland-snow-cover,
+[data-sky][data-weather="snow"][data-page="home"]:not(.woodland-view) .woodland-pine-snow { display: block; }
+[data-theme="night"] .woodland-snow-cover { opacity: .53; }
+.woodland-leaves { display: none; position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+[data-windy] .woodland-leaves { display: block; }
+.woodland-leaves > g { color: #cb783f; --leaf-size: .8; --leaf-duration: 12s; --leaf-delay: -2s; }
+.woodland-leaves > g:nth-of-type(2n) { color: #ddb266; --leaf-size: .62; --leaf-duration: 15s; --leaf-delay: -6s; }
+.woodland-leaves > g:nth-of-type(3n) { color: #bf6344; --leaf-size: .93; --leaf-duration: 10s; --leaf-delay: -8s; }
+.woodland-leaves > g:nth-of-type(4n) { --leaf-duration: 13s; --leaf-delay: -10s; }
+.woodland-leaves > g:nth-of-type(5n) { --leaf-duration: 11s; --leaf-delay: -5s; }
+.woodland-leaves > g:nth-of-type(7n) { --leaf-duration: 16s; --leaf-delay: -12s; }
+.woodland-leaves use { animation: woodland-leaf-flight var(--leaf-duration) linear var(--leaf-delay) infinite; }
+@keyframes woodland-leaf-flight {
+  from { transform: translateX(0) rotate(15deg) scale(var(--leaf-size)); }
+  25% { transform: translate(500px, 24px) rotate(120deg) scale(var(--leaf-size)); }
+  50% { transform: translate(1010px, -14px) rotate(215deg) scale(var(--leaf-size)); }
+  75% { transform: translate(1520px, 11px) rotate(300deg) scale(var(--leaf-size)); }
+  to { transform: translate(2040px, 38px) rotate(375deg) scale(var(--leaf-size)); }
+}
+@keyframes woodland-cloud-pass {
+  from { transform: translate3d(-2280px, 0, 0); }
+  to { transform: translate3d(2280px, 0, 0); }
+}
+@keyframes woodland-overcast-pass {
+  from { transform: translate3d(-2280px, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+@keyframes woodland-lightning { 0%, 57%, 63%, 100% { opacity: 0; } 59% { opacity: .58; } }
+@keyframes woodland-rain { to { transform: translate3d(-32px, 220px, 0); } }
+@keyframes woodland-snow { 50% { transform: translate3d(19px, 130px, 0); } to { transform: translate3d(0, 260px, 0); } }
+/* Pause scene animation while the application is hidden. */
+#stage.background-paused .woodland-weather *, #stage.background-paused .woodland-weather *::before,
+#stage.background-paused .woodland-weather *::after,
+#stage.background-paused .woodland-fireflies use,
+#stage.background-paused .woodland-fox, #stage.background-paused .woodland-fox *,
+#stage.background-paused .woodland-bat, #stage.background-paused .woodland-bat * { animation-play-state: paused; }
+.woodland-fish { display: none; position: absolute; top: 0; left: 0; width: 47px; height: 18px; opacity: 0; background: url('assets/woodland-fish.svg') center / contain no-repeat; pointer-events: none; }
+[data-page="home"]:not(.woodland-view) .woodland-fish[data-route] { display: block; animation-duration: var(--swim-time, 4s); animation-timing-function: ease-in-out; }
+.woodland-fish[data-route="far"] { animation-name: fish-far; }
+.woodland-fish[data-route="bend"] { animation-name: fish-bend; }
+.woodland-fish[data-route="near"] { animation-name: fish-near; }
+.woodland-fish[data-route="cove"] { animation-name: fish-cove; }
+.woodland-fish[data-route="inlet"] { animation-name: fish-inlet; }
+.woodland-fish[data-route="deep"] { animation-name: fish-deep; }
+/* Each route stays within the visible lake or river. */
+@keyframes fish-cove {
+  0% { transform: translate3d(605px, 565px, 0) scale(.59); opacity: 0; }
+  28% { transform: translate3d(654px, 567px, 0) scale(.56); opacity: .43; }
+  72% { transform: translate3d(725px, 562px, 0) rotate(-3deg) scale(.55); opacity: .40; }
+  100% { transform: translate3d(791px, 550px, 0) rotate(-5deg) scale(.52); opacity: 0; }
+}
+@keyframes fish-inlet {
+  0% { transform: translate3d(1234px, 513px, 0) scale(-.54, .54); opacity: 0; }
+  29% { transform: translate3d(1186px, 519px, 0) scale(-.57, .57); opacity: .39; }
+  72% { transform: translate3d(1124px, 526px, 0) rotate(-5deg) scale(-.59, .59); opacity: .46; }
+  100% { transform: translate3d(1074px, 530px, 0) scale(-.61, .61); opacity: 0; }
+}
+@keyframes fish-far {
+  0% { transform: translate3d(1139px, 665px, 0) scale(.72); opacity: 0; }
+  28% { transform: translate3d(1185px, 676px, 0) rotate(5deg) scale(.74); opacity: .42; }
+  70% { transform: translate3d(1270px, 689px, 0) rotate(3deg) scale(.78); opacity: .50; }
+  100% { transform: translate3d(1337px, 692px, 0) scale(.76); opacity: 0; }
+}
+@keyframes fish-bend {
+  0% { transform: translate3d(1296px, 718px, 0) scaleX(-.84) scaleY(.84); opacity: 0; }
+  33% { transform: translate3d(1254px, 726px, 0) rotate(-6deg) scaleX(-.9) scaleY(.9); opacity: .46; }
+  72% { transform: translate3d(1215px, 723px, 0) rotate(3deg) scaleX(-.87) scaleY(.87); opacity: .54; }
+  100% { transform: translate3d(1177px, 705px, 0) rotate(8deg) scaleX(-.79) scaleY(.79); opacity: 0; }
+}
+@keyframes fish-near {
+  0% { transform: translate3d(1145px, 775px, 0); opacity: 0; }
+  34% { transform: translate3d(1199px, 761px, 0) rotate(-7deg) scale(1.04); opacity: .53; }
+  73% { transform: translate3d(1251px, 761px, 0) rotate(3deg) scale(.98); opacity: .57; }
+  100% { transform: translate3d(1293px, 772px, 0) rotate(6deg) scale(.94); opacity: 0; }
+}
+@keyframes fish-deep {
+  0% { transform: translate3d(1372px, 803px, 0) scale(-1, 1); opacity: 0; }
+  34% { transform: translate3d(1323px, 788px, 0) rotate(5deg) scale(-.94, .94); opacity: .48; }
+  71% { transform: translate3d(1246px, 795px, 0) rotate(-4deg) scale(-.88, .88); opacity: .51; }
+  100% { transform: translate3d(1166px, 804px, 0) scale(-.84, .84); opacity: 0; }
+}
+/* Pine silhouettes cover the animals as they cross the trail. */
+.woodland-foreground { position: absolute; left: 478px; top: 490px; width: 604px; height: 280px; z-index: 0; pointer-events: none; }
+[data-theme="night"] .path-pine { fill: #1a2733; }
+[data-theme="night"] .path-pine-light { fill: #243541; }
+.woodland-owl, .woodland-eyes, .camp-light { display: none; }
+[data-theme="night"] .woodland-owl { display: inline; }
+.owl-eyes-open { animation: owl-blink 13s steps(1, end) infinite; }
+.owl-eyes-closed { opacity: 0; animation: owl-lids 13s steps(1, end) infinite; }
+@keyframes owl-blink { 0%, 97%, 100% { opacity: 1; } 95% { opacity: 0; } }
+@keyframes owl-lids { 0%, 97%, 100% { opacity: 0; } 95% { opacity: 1; } }
+.woodland-eyes { position: absolute; pointer-events: none; opacity: 0; background: url('assets/woodland-eyes.svg') center / contain no-repeat; animation: eyes-in-pines 24s steps(1, end) infinite; }
+.foreground-eyes { left: 1628px; top: 672px; width: 30px; height: 12px; }
+.distant-eyes { left: 948px; top: 455px; width: 17px; height: 8px; animation-delay: -9s; }
+.campsite-eyes { left: 533px; top: 686px; width: 23px; height: 10px; animation-delay: -6s; }
+.trail-eyes { left: 987px; top: 675px; width: 20px; height: 9px; animation-delay: -15s; }
+.ridge-eyes { left: 1206px; top: 472px; width: 16px; height: 7px; animation-delay: -20s; }
+.riverbank-eyes { left: 1774px; top: 712px; width: 26px; height: 11px; animation-delay: -3s; }
+[data-page="home"][data-theme="night"]:not(.woodland-view) .woodland-eyes:not(.extra-eyes),
+[data-page="home"][data-theme="night"][data-hide-night-wildlife]:not(.woodland-view) .extra-eyes { display: block; }
+@keyframes eyes-in-pines { 0%, 29%, 53%, 61%, 89%, 100% { opacity: 0; } 36%, 54%, 80% { opacity: .82; } 56% { opacity: 0; } 57% { opacity: .82; } }
+/* Keep the campsite visible and light the fire only under suitable conditions. */
+.woodland-camp { position: absolute; left: 191px; top: 662px; width: 357px; height: 135px; z-index: 0; display: none; pointer-events: none; }
+.woodland-camp svg { width: 100%; height: 100%; }
+[data-page="home"]:not(.woodland-view) .woodland-camp { display: block; }
+[data-theme="night"]:not([data-windy]):not([data-weather="rain"]):not([data-weather="storm"]) .camp-light { display: inline; }
+[data-theme="night"] .tent-side { fill: #725b51; }
+[data-theme="night"] .tent-front { fill: #947252; }
+.camp-flame { transform-origin: 127px 67px; animation: camp-flicker 1.9s ease-in-out infinite alternate; }
+@keyframes camp-flicker { 35% { transform: scale(.95, 1.1) rotate(-4deg); } 75% { transform: scale(1.05, .86) rotate(3deg); } }
+.woodland-bat { display: none; visibility: hidden; position: absolute; top: 0; left: 0; width: 62px; height: 31px; pointer-events: none; }
+.woodland-bat svg { display: block; width: 100%; height: 100%; fill: #151821; stroke: #786f85; stroke-width: .9; stroke-linejoin: round; }
+[data-page="home"][data-theme="night"]:not(.woodland-view) .woodland-bat { display: block; animation: bat-flight 52s linear infinite; }
+#stage[data-windy][data-page="home"]:not(.woodland-view) .woodland-fireflies,
+#stage[data-hide-night-wildlife][data-page="home"]:not(.woodland-view) .woodland-bat,
+#stage[data-hide-night-wildlife][data-page="home"]:not(.woodland-view) .woodland-owl,
+#stage[data-weather="rain"][data-page="home"]:not(.woodland-view) .woodland-fox,
+#stage[data-weather="storm"][data-page="home"]:not(.woodland-view) .woodland-fox { display: none; }
+.bat-wing { transform-origin: 32px 15px; animation: bat-flap .34s ease-in-out infinite; }
+@keyframes bat-flap { 50% { transform: scaleY(.35); } 78% { transform: scaleY(.74); } }
+@keyframes bat-flight {
+  0%, 5% { transform: translate3d(-70px, 200px, 0); visibility: hidden; }
+  6% { transform: translate3d(-64px, 200px, 0); visibility: visible; }
+  10% { transform: translate3d(491px, 229px, 0) rotate(7deg); visibility: visible; }
+  13% { transform: translate3d(906px, 166px, 0) rotate(-9deg); visibility: visible; }
+  17% { transform: translate3d(1457px, 141px, 0) rotate(-3deg); visibility: visible; }
+  21% { transform: translate3d(1950px, 173px, 0) rotate(5deg); visibility: visible; }
+  22%, 55% { transform: translate3d(1960px, 173px, 0); visibility: hidden; }
+  56% { transform: translate3d(1960px, 269px, 0); visibility: visible; }
+  60% { transform: translate3d(1522px, 217px, 0) rotate(8deg); visibility: visible; }
+  64% { transform: translate3d(1005px, 111px, 0) rotate(10deg); visibility: visible; }
+  68% { transform: translate3d(453px, 139px, 0) rotate(-7deg); visibility: visible; }
+  72% { transform: translate3d(-70px, 185px, 0) rotate(-5deg); visibility: visible; }
+  73%, 100% { transform: translate3d(-70px, 185px, 0); visibility: hidden; }
+}
+.woodland-layer { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+.woodland-layer:last-child { z-index: 2; }
+.woodland-fox { display: none; position: absolute; left: 36px; top: 151px; width: 94px; height: 53px; z-index: 1; }
+[data-page="home"][data-theme="day"]:not(.woodland-view) .woodland-fox { display: block; animation: fox-cross 23s linear infinite; }
+.fox-body { width: 100%; height: 100%; animation: fox-turn 23s steps(1, end) infinite; }
+.fox-fish { opacity: 0; animation: fox-catch 23s steps(1, end) infinite; }
+.woodland-fox svg { display: block; width: 100%; height: 100%; }
+.fox-stride { animation: fox-bounce .32s ease-in-out alternate infinite; }
+.fox-near-leg, .fox-far-leg { fill: none; stroke-linecap: round; stroke-linejoin: round; stroke-width: 4; animation: fox-stride .32s ease-in-out alternate infinite; transform-origin: 51px 33px; }
+.fox-near-leg { stroke: #653f31; }
+.fox-far-leg { stroke: #864b32; animation-direction: alternate-reverse; }
+/* Hide the fox behind each pine before reversing direction. */
+@keyframes fox-cross {
+  0%, 4%, 100% { transform: translate3d(0, 0, 0); visibility: hidden; }
+  5% { transform: translate3d(14px, 0, 0); visibility: visible; }
+  17% { transform: translate3d(210px, 16px, 0); visibility: visible; }
+  28%, 49% { transform: translate3d(422px, 16px, 0); visibility: visible; }
+  29%, 48% { transform: translate3d(425px, 17px, 0); visibility: hidden; }
+  62% { transform: translate3d(210px, 16px, 0); visibility: visible; }
+  75% { transform: translate3d(9px, 12px, 0); visibility: visible; }
+  76%, 99% { transform: translate3d(9px, 12px, 0); visibility: hidden; }
+}
+@keyframes fox-turn { 0%, 85%, 100% { transform: scaleX(1); } 39% { transform: scaleX(-1); } }
+@keyframes fox-catch { 0%, 85%, 100% { opacity: 0; } 39% { opacity: 1; } }
+@keyframes fox-bounce { to { transform: translateY(-4px); } }
+@keyframes fox-stride { from { transform: skewX(-24deg); } to { transform: skewX(28deg); } }
+@media (prefers-reduced-motion: reduce) {
+  .owl-eyes-open, .owl-eyes-closed, .woodland-eyes, .camp-flame, .weather-icon *, .fox-stride, .fox-near-leg, .fox-far-leg, .fox-body, .fox-fish,
+  #stage .woodland-weather > div, #stage .woodland-storm-light::before { animation: none; }
+  #stage .woodland-clouds::before, #stage .woodland-clouds::after { animation: none; }
+  #stage .woodland-clouds::before { transform: translateX(-124px); }
+  #stage .woodland-clouds::after { display: none; }
+  #stage .woodland-fish { display: none; }
+  #stage .woodland-bat, #stage .woodland-leaves { display: none; }
+  #stage .bat-wing { animation: none; }
+  #stage[data-transition] .woodland-transition, #stage[data-transition] .shade::before,
+  #stage[data-transition] .shade::after { display: none; animation: none; }
+  #stage[data-transition="dusk"] .shade { background: var(--office-shade); }
+  #stage[data-transition="dawn"] .shade { background: var(--evening-shade); }
+  #stage[data-transition] .woodland-celestial g { animation: none; }
+  #stage[data-transition="dawn"] .woodland-sun, #stage[data-transition="dusk"] .woodland-moon { display: none; }
+  #stage[data-transition] .woodland-fireflies, .woodland-fireflies use { animation: none; }
+  #stage[data-transition="dusk"] .woodland-fireflies { display: none; }
+  .woodland-fireflies use { opacity: .72; }
+  [data-page="home"][data-theme="day"]:not(.woodland-view) .woodland-fox { animation: none; transform: translate(210px, 16px); }
+}
+[data-theme="night"] .shade { background: var(--evening-shade); }
+
+/* Place the live movie and TV shelves on opposite sides of Home. */
+.live-shelves { display: grid; grid-template-columns: repeat(2, 478px); justify-content: space-between; margin-bottom: 120px; }
+.live-shelf { padding: 9px 12px 12px; border: 1px solid var(--edition-rule); border-radius: 12px; background: #1b1d29e8; }
+[data-theme="day"] .live-shelf { background: #1b2529e8; }
+.live-shelf-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
+.live-shelf-heading h2 { font-size: 19px; font-weight: 500; margin: 0; }
+.live-guide-button { background: transparent; color: var(--edition-violet); font-size: 14px; padding: 6px 8px; }
+.live-cards { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; min-height: 118px; }
+.live-card { position: relative; height: 118px; display: flex; align-items: flex-end; padding: 7px 9px; background: #2a2939; border-radius: 7px; overflow: hidden; text-align: left; }
+[data-theme="day"] .live-card { background: #253534; }
+.live-card img, .live-card::after { position: absolute; top: 0; right: 0; bottom: 0; }
+.live-card img { width: 100%; height: 100%; object-fit: cover; opacity: .75; }
+.live-card::after { content: ''; left: 0; background: linear-gradient(0deg, #191a25 6%, #191a25cc 28%, #191a2500 68%); }
+.live-card-text { display: block; position: relative; z-index: 1; min-width: 0; }
+.live-card strong { display: -webkit-box; font-size: 15px; line-height: 1.1; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+.live-card small { display: block; margin-top: 3px; font-size: 11px; color: #d0c8da; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.live-empty { grid-column: 1 / -1; align-self: center; color: var(--edition-muted); margin: 0; }
+[data-page="home"] .section-heading { padding-top: 8px; margin-bottom: 8px; }
+[data-page="home"] .app-row { justify-content: flex-start; gap: 0; padding-top: 13px; padding-bottom: 12px; }
+[data-page="home"] .app-row .app-card { flex-grow: 1; }
+[data-page="home"] .app-row .app-card + .app-card { margin-left: 16px; }
+.live-thumbnail { position: absolute; top: 0; right: 0; width: 74%; height: 100%; object-fit: cover; opacity: 0; pointer-events: none; }
+.live-card.is-playing .live-thumbnail { width: 100%; opacity: 1; }
+.live-card.is-playing img { visibility: hidden; }
+.live-card.is-playing::before, .app-card.is-playing .app-art::before { content: 'LIVE'; position: absolute; top: 7px; right: 7px; z-index: 2; padding: 2px 5px; border-radius: 3px; background: #a62f42; color: #fff; font-size: 10px; letter-spacing: .7px; }
+.app-card.is-playing .app-art .live-thumbnail { width: 100%; opacity: 1; }
+.app-card.is-playing .app-art .app-monogram, .app-card.is-playing .app-art img { visibility: hidden; }
+[data-page="home"] .app-row .app-art { height: 92px; }
+.native-tv[data-page="home"] .app-row, .native-tv .live-shelf, .native-tv .preview-panel { background: #222431; }
+.native-tv[data-page="home"][data-theme="day"] .app-row, .native-tv[data-theme="day"] .live-shelf, .native-tv[data-theme="day"] .preview-panel { background: #202b2e; }
+#version-history { position: absolute; left: 94px; bottom: 28px; padding: 7px 10px; color: var(--edition-muted); background: transparent; border-radius: 5px; font-size: 13px; }
+#end-scene-review { position: absolute; right: 94px; bottom: 23px; padding: 9px 14px; font-size: 14px; }
+.version-history:hover { color: var(--edition-paper); }
+.woodland-view #version-history, .market-fullscreen #version-history { display: none; }
+.release-version { font-size: 21px; margin: 24px 0 4px; color: var(--edition-violet); }
+#modal .release-notes { margin: 0; }
+
+#stage button:focus, #stage a:focus { outline: none; transform: none; }
+#stage .app-card.is-moving:focus { transform: translateY(-4px); }
+#focus-ring { position: absolute; top: 0; left: 0; z-index: 15; pointer-events: none; border: 3px solid #ddc4fb; border-radius: 10px; transition: transform 115ms cubic-bezier(.2,.75,.25,1); will-change: transform; }
+[data-theme="day"] #focus-ring { border-color: #cadfd3; }
+nav, .office-actions, .app-actions, .home-market-tabs { gap: 0; }
+nav > * + *, .office-actions > * + *, .home-market-tabs > * + * { margin-left: 11px; }
+.app-actions > * + * { margin-left: 26px; }

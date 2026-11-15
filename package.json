@@ -1,0 +1,15 @@
+{
+  "name": "frame-launcher",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A quiet, remote-first launcher for Samsung The Frame",
+  "scripts": {
+    "start": "node tools/serve.cjs",
+    "test": "playwright test",
+    "package": "python tools/package.py"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "hls.js": "1.7.4"
+  }
+}

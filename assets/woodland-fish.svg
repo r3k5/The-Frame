@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 25">
+  <!-- Silhouette used by the short fish paths across the lake. -->
+  <path d="M4 6q8 1 15 5 7-7 17-6l8-4-2 6q12 1 18 6-5 6-18 6l-11 4-1-5q-6-1-11-4-6 4-15 6l4-7Z" fill="#142f41"/>
+  <path d="M20 13q14 1 25-2 6-2 11 1" stroke="#a1c4c5" stroke-opacity=".28" fill="none"/>
+</svg>

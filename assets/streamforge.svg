@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="StreamForge">
+  <!-- StreamForge's clapperboard mark and brand-500 palette. -->
+  <g fill="#7e60f2" fill-rule="evenodd">
+    <path transform="rotate(-14 8 28)" d="M10 18h44a2 2 0 0 1 2 2v6a2 2 0 0 1-2 2H10a2 2 0 0 1-2-2v-6a2 2 0 0 1 2-2Zm4 0h6l6 10h-6Zm14 0h6l6 10h-6Zm14 0h6l6 10h-6Z"/>
+    <path d="M8 30h48v23a5 5 0 0 1-5 5H13a5 5 0 0 1-5-5Zm21 7.5a1 1 0 0 0-1.5.866v11.268A1 1 0 0 0 29 50.5l9.75-5.634a1 1 0 0 0 0-1.732Z"/>
+  </g>
+</svg>

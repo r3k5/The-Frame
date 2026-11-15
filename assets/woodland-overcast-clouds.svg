@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2280 280">
+  <!-- A continuous cloud deck that slides across the stage. -->
+  <defs>
+    <linearGradient id="ceiling-mask" x2="0" y2="1">
+      <stop stop-color="white"/>
+      <stop offset=".35" stop-color="white" stop-opacity=".82"/>
+      <stop offset=".73" stop-color="white" stop-opacity=".31"/>
+      <stop offset="1" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <mask id="fade" maskUnits="userSpaceOnUse" x="0" y="0" width="2280" height="280">
+      <rect width="2280" height="280" fill="url(#ceiling-mask)"/>
+    </mask>
+    <filter id="deck" filterUnits="userSpaceOnUse" x="0" y="0" width="2280" height="280" color-interpolation-filters="sRGB">
+      <feTurbulence type="fractalNoise" baseFrequency=".0028 .016" numOctaves="4" seed="63" stitchTiles="stitch" result="texture"/>
+      <feColorMatrix in="texture" type="matrix" values="
+        .57 .52 .37 0 -.14
+        .57 .52 .37 0 -.10
+        .57 .52 .37 0 -.055
+        0 0 0 0 1"/>
+    </filter>
+    <linearGradient id="haze" x2="0" y2="1">
+      <stop stop-color="#667487" stop-opacity=".08"/>
+      <stop offset=".5" stop-color="#8a9ca9" stop-opacity=".28"/>
+      <stop offset="1" stop-color="#adb6c1" stop-opacity=".18"/>
+    </linearGradient>
+  </defs>
+  <g mask="url(#fade)">
+    <rect width="2280" height="280" fill="#6d7889" filter="url(#deck)"/>
+    <rect width="2280" height="280" fill="url(#haze)"/>
+  </g>
+</svg>

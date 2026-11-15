@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="https://r3k5.local/frame-launcher" version="0.1.48" viewmodes="maximized">
+  <tizen:application id="R3K5Frame1.Launcher" package="R3K5Frame1" required_version="6.0"/>
+  <content src="index.html"/>
+  <!-- Send the TV Home operation to an existing launcher instance. -->
+  <tizen:app-control>
+    <tizen:src name="index.html" reload="disable"/>
+    <tizen:operation name="http://tizen.org/appcontrol/operation/main"/>
+  </tizen:app-control>
+  <name>Frame</name>
+  <icon src="assets/icon.png"/>
+  <tizen:profile name="tv-samsung"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.info"/>
+  <tizen:privilege name="http://tizen.org/privilege/application.launch"/>
+  <tizen:privilege name="http://tizen.org/privilege/internet"/>
+  <!-- Allow hosts used by charts, weather, listings, and previews. -->
+  <access origin="https://tradingview.com" subdomains="true"/>
+  <access origin="https://tradingview-widget.com" subdomains="true"/>
+  <access origin="https://api.open-meteo.com"/>
+  <access origin="https://api.zippopotam.us"/>
+  <access origin="https://i.mjh.nz"/>
+  <access origin="https://raw.githubusercontent.com"/>
+  <access origin="https://tvpnlogopus.samsungcloud.tv"/>
+  <access origin="https://akamaized.net" subdomains="true"/>
+  <access origin="https://youtube.com" subdomains="true"/>
+  <access origin="https://youtube-nocookie.com" subdomains="true"/>
+  <!-- Input discovery and HDMI switching use TV system APIs. -->
+  <tizen:privilege name="http://tizen.org/privilege/tv.window"/>
+  <tizen:privilege name="http://tizen.org/privilege/system"/>
+  <tizen:setting screen-orientation="landscape" context-menu="disable" background-support="disable" encryption="disable" install-location="auto" hwkey-event="enable"/>
+  <tizen:metadata key="http://samsung.com/tv/metadata/screen.size" value="normal"/>
+</widget>

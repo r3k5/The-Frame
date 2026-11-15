@@ -1,0 +1,117 @@
+/* Base layout for the fixed-size TV stage. */
+*{box-sizing:border-box}
+html,body{margin:0;width:100%;height:100%;overflow:hidden;background:#141612;color:#f6f3e9;font-family:Arial,Helvetica,sans-serif}
+button,a{-webkit-tap-highlight-color:transparent}
+button{font:inherit;color:inherit;border:0;cursor:pointer}
+button:focus,a:focus{outline:3px solid #f2e7ca;outline-offset:7px}
+button:disabled{opacity:.4;cursor:default}
+button:focus{position:relative;z-index:2}
+button{transition:background .16s,transform .16s}
+button:focus{transform:translateY(-3px)}
+[hidden]{display:none!important}
+/* Cover the first render until Home can take input. */
+.startup-splash{position:fixed;inset:0;z-index:1000;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:26px;background:#11181c;color:#f2eee4;opacity:1;visibility:visible;transition:opacity .32s ease-out,visibility 0s linear .32s}
+.startup-splash.is-dismissing{opacity:0;visibility:hidden;pointer-events:none}
+.startup-wordmark{display:flex;align-items:center;font-size:clamp(24px,3vw,54px);font-weight:600;letter-spacing:.23em}
+.startup-wordmark .frame-mark{width:1em;height:1em;margin-right:.32em;border-width:2px}
+.startup-splash progress{appearance:none;width:min(32vw,320px);height:5px;border:0;border-radius:5px;overflow:hidden;background:#2d3a3d;accent-color:#afc8b8}
+.startup-splash progress::-webkit-progress-bar{background:#2d3a3d}
+.startup-splash progress::-webkit-progress-value{background:#afc8b8;transition:width .16s ease-out}
+/* Scale this coordinate space to fit the display. */
+#stage{position:absolute;width:1920px;height:1080px;transform-origin:top left;overflow:hidden;background:#141612}
+.landscape,.shade{position:absolute;inset:0}
+.landscape{background:url('assets/woodland.svg#night-backdrop') center/cover no-repeat;transition:opacity .4s}
+.shade{background:linear-gradient(90deg,rgba(12,19,18,.76),rgba(12,19,18,.06) 78%),linear-gradient(0deg,#141815 1%,rgba(20,24,21,.92) 25%,transparent 65%)}
+/* Navigation, wordmark, and clock. */
+header{position:absolute;left:88px;right:88px;top:55px;height:70px;display:flex;align-items:center}
+.brand{color:#fff;text-decoration:none;display:flex;align-items:center;letter-spacing:7px;font-size:28px;font-weight:600}
+.frame-mark{display:block;width:28px;height:35px;border:2px solid #e4dfd0;margin-right:17px;position:relative}
+.frame-mark:after{content:'';position:absolute;inset:6px;border:1px solid #d6ceba}
+.brand-note{font-size:10px;letter-spacing:2px;font-weight:400;color:#c7cbbd;margin-left:32px;width:125px;line-height:1.7}
+nav{display:flex;margin-left:auto;margin-right:58px;gap:12px}
+.nav{background:transparent;color:#d6d7cf;padding:16px 23px;font-size:22px;border-radius:30px}
+.nav.active{background:rgba(240,238,224,.13);color:#fff}
+.icon-button{background:transparent;width:42px;height:42px;padding:9px;margin-right:38px}
+.icon-button svg{width:100%;height:100%;fill:none;stroke:#eee9dd;stroke-width:1.4}
+.time-block{text-align:right;min-width:150px}
+#clock{font-size:35px;letter-spacing:-1px}
+#clock small{font-size:15px;letter-spacing:1px;margin-left:7px;color:#d6d6ca}
+#date{font-size:13px;letter-spacing:1px;color:#c2c6b8;margin-top:7px}
+main{position:absolute;left:94px;right:94px;top:190px;bottom:125px}
+.eyebrow{font-size:14px;letter-spacing:4px;color:#dbd1b8;text-transform:uppercase;display:flex;align-items:center;gap:15px}
+.eyebrow:before{content:'';height:1px;width:32px;background:#c8b98c}
+.hero{height:435px;padding-top:32px;position:relative}
+.hero h1{font-family:Georgia,'Times New Roman',serif;font-size:82px;line-height:1.1;font-weight:400;letter-spacing:-2px;margin:27px 0 21px}
+.hero p{font-size:20px;line-height:1.7;color:#d1d4c6;margin:0}
+.section-heading{display:flex;align-items:center;justify-content:space-between;margin:0 0 25px}
+.section-heading h2{font-weight:400;font-size:24px;letter-spacing:.2px;margin:0}
+.section-heading button{color:#c6c9ba;background:transparent;font-size:16px;padding:8px 10px}
+.section-heading button span{margin-left:12px}
+/* Home dock, app tiles, and service colors. */
+.app-row{display:flex;gap:22px}
+.app-card{width:229px;background:transparent;padding:0;text-align:left;border-radius:13px;flex-shrink:0}
+.app-art{height:133px;border-radius:12px;background:#27322c;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;box-shadow:0 10px 30px #0002}
+.app-label{display:block;font-size:17px;color:#d0d3c7;margin:17px 3px 0}
+.app-monogram{font-size:30px;letter-spacing:-1px;font-weight:600}
+.app-art img{width:74px;height:74px;object-fit:contain;border-radius:10px}
+.app-art.netflix{background:#201c1b;color:#ef373a}
+.app-art.netflix .app-monogram{font-size:40px;letter-spacing:3px}
+.app-art.youtube{background:#efece2;color:#282725}
+.app-art.youtube .app-monogram:before{content:'▶';display:inline-block;background:#e94a3c;color:#fff;border-radius:9px;padding:3px 10px;margin-right:8px;font-size:23px}
+.app-art.prime{background:#203c49;color:#d5eef3}
+.app-art.disney{background:#232c48;color:#e6e9f2}
+.app-art.plex{background:#332c22;color:#e2b862}
+.app-art.spotify{background:#23382c;color:#a2cc9c}
+.app-art.more{background:#ffffff08;border:1px solid #ffffff1a}
+.more .app-monogram{font-size:44px;font-weight:400;letter-spacing:9px}
+.section-note{font-size:13px;color:#a7af9f;margin:27px 0 0;letter-spacing:.5px}
+.section-note span{margin-right:10px}
+footer{position:absolute;left:94px;right:94px;bottom:44px;border-top:1px solid #c9ccb21c;padding-top:26px;display:flex;align-items:center;color:#abb3a2;font-size:13px;letter-spacing:.4px}
+footer>div:first-child{width:480px;display:flex;align-items:center;gap:10px}
+.status-dot{width:6px;height:6px;border-radius:50%;background:#c8cdaa}
+.key{display:inline-block;border:1px solid #a9b29d50;border-radius:4px;padding:2px 6px;margin:0 9px 0 25px;font-size:11px}
+.footer-brand{margin-left:auto;font-size:10px;letter-spacing:2px}
+/* Secondary screens share a heading and scrollable controls. */
+.page-heading{margin:20px 0 35px}
+.page-heading h1{font-family:Georgia,serif;font-weight:400;font-size:62px;margin:20px 0 12px;letter-spacing:-1px}
+.page-heading p{font-size:18px;color:#c4cbbb;margin:0}
+.scroll-area{overflow-y:auto;max-height:505px;padding:12px 12px 25px;margin:-12px;scrollbar-width:thin}
+.app-grid{display:grid;grid-template-columns:repeat(6,1fr);gap:30px 22px}
+.app-grid .app-card{width:100%}
+.app-grid .app-art{height:140px}
+.pin-indicator{position:absolute;top:12px;right:13px;font-size:15px;color:#e5d9b6}
+.empty{font-size:22px;line-height:1.7;color:#c5cbbb;max-width:850px;padding:32px 0}
+.text-button{background:#dcd5bf;color:#1d251f;padding:14px 24px;border-radius:7px;font-size:18px}
+.input-grid{display:flex;gap:25px;flex-wrap:wrap}
+.input-card{background:#25302aaa;width:320px;min-height:200px;border:1px solid #bcc6b32e;border-radius:13px;padding:28px;text-align:left}
+.input-card strong{display:block;font-size:28px;font-weight:400;margin:20px 0 13px}
+.input-card span{font-size:15px;color:#b7c2ac}
+.input-icon{width:35px;height:23px;border:2px solid #b7c2ac;border-radius:3px;position:relative}
+.input-icon:after{content:'';position:absolute;bottom:-8px;left:7px;width:16px;border-bottom:2px solid #b7c2ac}
+/* Full-screen Woodland hides the launcher controls. */
+.woodland-view header,.woodland-view main,.woodland-view footer,.woodland-view .shade{display:none}
+.woodland-view #woodland-caption{position:absolute;left:64px;right:64px;bottom:42px;display:flex;justify-content:space-between;align-items:center;opacity:0;transition:opacity .25s;color:#fff;text-shadow:0 2px 8px #000}
+.woodland-view #woodland-caption.awake{opacity:1}
+#leave-woodland{background:#18251dcc;padding:13px 23px;border-radius:25px;font-size:17px}
+#leave-woodland span{margin-left:20px}
+#art-caption{font-family:Georgia,serif;font-size:24px}
+#modal-layer{position:absolute;inset:0;background:#080e0ac2;display:flex;justify-content:flex-end;z-index:10}
+#modal{background:#202920;width:650px;padding:60px 55px;box-shadow:-30px 0 100px #0005;overflow-y:auto}
+#modal h2{font-family:Georgia,serif;font-weight:400;font-size:45px;margin:18px 0 20px}
+#modal p{color:#bfc9b6;line-height:1.65;font-size:18px}
+#modal .eyebrow{font-size:12px}
+#modal .close{float:right;background:transparent;font-size:24px;padding:5px 12px}
+.setting-label{display:block;font-size:13px;letter-spacing:2px;text-transform:uppercase;color:#aab89e;margin:35px 0 16px}
+.setting-choice{background:#313d2f;display:block;width:100%;text-align:left;font-size:20px;padding:19px 22px;border-radius:6px;margin-bottom:12px}
+.setting-choice small{display:block;font-size:14px;color:#b2bea6;margin-top:9px}
+.setting-choice.selected{border:1px solid #d9cfaf}
+.setting-choice.selected:after{content:'✓';float:right;color:#e6d8b3}
+.modal-actions{display:flex;gap:20px;margin-top:35px}
+.secondary{background:#3a4736;color:#e1e5d7}
+.danger{background:#51382f;color:#f0d9cc}
+#toast{position:absolute;bottom:120px;left:50%;transform:translateX(-50%);z-index:20;background:#ece5d1;color:#202820;padding:19px 28px;border-radius:8px;box-shadow:0 12px 40px #0005;font-size:19px;max-width:1100px;text-align:center}
+@media(prefers-reduced-motion:reduce){*{transition:none!important}}
+.app-art.streamforge{background:#211d32;flex-direction:column;gap:4px}
+.streamforge .app-monogram{font-size:24px;letter-spacing:-.7px;order:2}
+.streamforge .forge-name{color:#9c84ff}
+.app-art.streamforge img{width:58px;height:58px;order:1;border-radius:0}

@@ -1,0 +1,163 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1920 1080">
+  <!-- Shared Woodland landscape with day, night, and overcast views. -->
+  <defs>
+    <filter id="galactic-soft" x="-10%" y="-100%" width="120%" height="300%"><feGaussianBlur stdDeviation="17"/></filter>
+    <radialGradient id="moonGlow"><stop stop-color="#d5c3dd" stop-opacity=".19"/><stop offset="1" stop-color="#d5c3dd" stop-opacity="0"/></radialGradient>
+    <radialGradient id="firelight"><stop stop-color="#e9d58c" stop-opacity=".65"/><stop offset=".25" stop-color="#dfce87" stop-opacity=".2"/><stop offset="1" stop-color="#d7c27c" stop-opacity="0"/></radialGradient>
+    <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#151924"/><stop offset=".4" stop-color="#484052"/><stop offset=".69" stop-color="#7e6578"/><stop offset="1" stop-color="#222832"/></linearGradient>
+    <radialGradient id="dusk" cx="72%" cy="39%" r="49%"><stop stop-color="#cda69e" stop-opacity=".4"/><stop offset=".55" stop-color="#997489" stop-opacity=".12"/><stop offset="1" stop-color="#8c6b8d" stop-opacity="0"/></radialGradient>
+    <linearGradient id="water" x2="0" y2="1"><stop stop-color="#7a788b"/><stop offset=".38" stop-color="#4a5a70"/><stop offset="1" stop-color="#283d53"/></linearGradient>
+    <linearGradient id="mist" x2="0" y2="1"><stop stop-color="#bbb0c1" stop-opacity=".38"/><stop offset="1" stop-color="#9b8ca7" stop-opacity="0"/></linearGradient>
+    <linearGradient id="day-sky" x2="0" y2="1"><stop stop-color="#3f667e"/><stop offset=".48" stop-color="#b1c8bd"/><stop offset="1" stop-color="#577a73"/></linearGradient>
+    <radialGradient id="sun-haze" cx="36%" cy="9%" r="53%"><stop stop-color="#f9d994" stop-opacity=".56"/><stop offset="1" stop-color="#e9c993" stop-opacity="0"/></radialGradient>
+    <linearGradient id="day-water" x2="0" y2="1"><stop stop-color="#aec8ba"/><stop offset=".45" stop-color="#65949b"/><stop offset="1" stop-color="#2b586c"/></linearGradient>
+    <linearGradient id="day-mist" x2="0" y2="1"><stop stop-color="#d3ded2" stop-opacity=".42"/><stop offset="1" stop-color="#b3c9bb" stop-opacity="0"/></linearGradient>
+    <linearGradient id="overcast-day-sky" x2="0" y2="1"><stop stop-color="#263945"/><stop offset=".46" stop-color="#839a9e"/><stop offset="1" stop-color="#577a73"/></linearGradient>
+    <linearGradient id="overcast-night-sky" x2="0" y2="1"><stop stop-color="#141c29"/><stop offset=".49" stop-color="#4a5667"/><stop offset="1" stop-color="#222832"/></linearGradient>
+    <linearGradient id="cloud-ceiling" x2="0" y2="1">
+      <stop stop-color="#90a0ac" stop-opacity=".23"/>
+      <stop offset=".38" stop-color="#899ca9" stop-opacity=".34"/>
+      <stop offset=".76" stop-color="#879aa4" stop-opacity=".14"/>
+      <stop offset="1" stop-color="#879aa4" stop-opacity="0"/>
+    </linearGradient>
+    <linearGradient id="reflections" x2="0" y2="1"><stop stop-color="#293d50" stop-opacity=".5"/><stop offset="1" stop-color="#293d50" stop-opacity="0"/></linearGradient>
+    <linearGradient id="alpine-rock" x2="0" y2="1"><stop stop-color="#607b88"/><stop offset="1" stop-color="#718f95"/></linearGradient>
+    <linearGradient id="alpine-night" x2="0" y2="1"><stop stop-color="#535568"/><stop offset="1" stop-color="#404a5e"/></linearGradient>
+    <pattern id="lake-ripples" width="420" height="126" patternUnits="userSpaceOnUse">
+      <path d="M20 4q33 1 75 0m124 7q44 2 106 0M4 24q14 1 34 0m95 11q32 2 107 1m60 11q42 2 87 0M44 61q79 2 138 0m62 9q34 2 57 0M16 88q44 2 83 0m56 10q74 3 194 0m8 15 41-1M39 118q58 2 115 0" fill="none" stroke="#e2ece0" stroke-opacity=".28" stroke-linecap="round"/>
+      <path d="M28 15q44 2 98 0m207 2h50M15 50q45 2 93 0m77 4q31 1 55 0m91 22 77-1M18 105q63 2 126 0m84-26q44 2 80 0" fill="none" stroke="#273f52" stroke-opacity=".24" stroke-linecap="round"/>
+    </pattern>
+    <path id="lake-shape" d="M0 536C205 492 344 509 525 548S829 563 991 517c180-46 334-26 462 14 140 44 281 12 467-31v580H0Z"/>
+    <clipPath id="lake-edge"><use xlink:href="#lake-shape"/></clipPath>
+    <symbol id="fir" viewBox="0 0 80 200">
+      <path d="m36 113-2 80-5 5 11-2 7 4-4-7-1-80Z" opacity=".86"/>
+      <path d="M38 0c3 14 10 31 18 44l-9-4q6 19 16 31l-12-3q8 21 20 40l-14-5q9 24 23 47l-13-2q-9 7-21 4l-7 6-8-5-15 4-16-5q14-23 23-46l-15 6q12-18 20-43l-12 8q11-19 16-36l-9 4Q34 23 38 0Z"/>
+      <path d="M38 1c-1 18-4 31-10 43l10-5q-5 20-17 36l17-8q-7 22-22 42l20-8q-7 25-23 45l19-7 7 10 4-23-7 3 10-29-7 2 7-30-7 3 5-32-4 2 2-21Z" fill="#c0d4b4" opacity=".13"/>
+      <path d="M39 63q9 19 18 23l-11-2q10 20 19 26l-18-7q11 24 23 34l-20-6 8 16-13-4-5 10-6-12-9 4 11-20-7 2q8-16 10-35l-6 4Z" fill="#071d24" opacity=".2"/>
+      <path d="m25 86 11-9m-15 41 14-11m9 0 13 13m-40 18 12-6" fill="none" stroke="#b6cdb2" stroke-opacity=".16" stroke-width="1.4" stroke-linecap="round"/>
+    </symbol>
+  </defs>
+  <style>.fly{animation:glow 5s ease-in-out infinite alternate}.fly:nth-child(2n){animation-delay:-3.4s}.fly:nth-child(3n){animation-delay:-1.8s;animation-duration:6.5s}@keyframes glow{0%,20%{opacity:.18}70%,100%{opacity:.95}}@media(prefers-reduced-motion:reduce){.fly{animation:none;opacity:.65}}</style>
+  <style>
+    .sky-variant { display: none; }
+    .sky-variant:target { display: inline; }
+    .sky-variant:target ~ .night-sky, .sky-variant:target ~ .fireflies { display: none; }
+    #night-backdrop:target ~ .night-sky .art-moon { display: none; }
+    #night-backdrop:target ~ .fireflies { display: none; }
+    .daylight:target ~ .woodland .far-peaks { fill: #929f9e; }
+    .daylight:target ~ .woodland .mountains { fill: url(#alpine-rock); }
+    .daylight:target ~ .woodland .rock-shadow { fill: #4f697a; }
+    .daylight:target ~ .woodland .rock-light { fill: #91a9ac; }
+    .daylight:target ~ .woodland .snowpack { fill: #e4ece3; }
+    .daylight:target ~ .woodland .snow-shadow { fill: #a3b9bd; }
+    .daylight:target ~ .woodland .ridge { fill: #4d6c62; }
+    .daylight:target ~ .woodland .distant-firs { fill: #355a50; }
+    .daylight:target ~ .woodland .mist { fill: url(#day-mist); }
+    .daylight:target ~ .woodland .bank-left { fill: #375d52; }
+    .daylight:target ~ .woodland .bank-right { fill: #3c6457; }
+    .daylight:target ~ .woodland .water { fill: url(#day-water); }
+    .daylight:target ~ .woodland .shore-left { fill: #244c43; }
+    .daylight:target ~ .woodland .shore-right { fill: #2b5147; }
+    .daylight:target ~ .woodland .firs { fill: #20473e; }
+    .daylight:target ~ .woodland .near-firs { fill: #163932; }
+    .daylight:target ~ .woodland .mid-firs { fill: #2d5749; }
+    .daylight:target ~ .woodland .foreground-left { fill: #19382f; }
+    .daylight:target ~ .woodland .foreground-right { fill: #1a3d34; }
+  </style>
+  <g id="overcast-day" class="sky-variant daylight">
+    <path fill="url(#overcast-day-sky)" d="M0 0h1920v1080H0z"/>
+    <rect width="1920" height="470" fill="url(#cloud-ceiling)"/>
+  </g>
+  <g id="overcast-night" class="sky-variant">
+    <path fill="url(#overcast-night-sky)" d="M0 0h1920v1080H0z"/>
+    <rect width="1920" height="470" fill="url(#cloud-ceiling)"/>
+  </g>
+  <g id="day" class="sky-variant daylight">
+    <path fill="url(#day-sky)" d="M0 0h1920v1080H0z"/>
+    <path fill="url(#sun-haze)" d="M0 0h1920v1080H0z"/>
+  </g>
+  <g id="night-backdrop"/>
+  <g class="night-sky">
+  <path fill="url(#sky)" d="M0 0h1920v1080H0z"/>
+  <path fill="url(#dusk)" d="M0 0h1920v1080H0z"/>
+  <!-- A faint sweep of galactic dust behind the moonlit mountain silhouettes. -->
+  <g fill="none" filter="url(#galactic-soft)">
+    <path d="M230-38C540 25 705 87 945 112S1400 190 1800 347" stroke="#b7a2c2" stroke-width="94" opacity=".12"/>
+    <path d="M290-31C560 44 723 67 967 123S1412 208 1760 325" stroke="#e0cde6" stroke-width="29" opacity=".12"/>
+    <path d="M250-26C580 46 714 115 992 141S1440 232 1800 357" stroke="#252333" stroke-width="21" opacity=".38"/>
+  </g>
+  <g fill="#e3dfec" opacity=".68">
+    <circle cx="82" cy="174" r="1.1"/><circle cx="164" cy="55" r=".8"/><circle cx="237" cy="246" r="1.4"/><circle cx="296" cy="151" r=".9"/>
+    <circle cx="349" cy="78" r="1.2"/><circle cx="402" cy="194" r=".8"/><circle cx="460" cy="231" r="1.1"/><circle cx="516" cy="138" r="1.4"/>
+    <circle cx="559" cy="44" r=".9"/><circle cx="612" cy="281" r="1.1"/><circle cx="664" cy="171" r=".9"/><circle cx="719" cy="211" r="1.3"/>
+    <circle cx="768" cy="57" r=".8"/><circle cx="813" cy="318" r="1.2"/><circle cx="865" cy="226" r=".8"/><circle cx="906" cy="64" r="1.4"/>
+    <circle cx="964" cy="170" r=".8"/><circle cx="1054" cy="57" r="1"/><circle cx="1111" cy="315" r=".8"/><circle cx="1169" cy="214" r="1.3"/>
+    <circle cx="1227" cy="73" r="1.2"/><circle cx="1274" cy="285" r=".9"/><circle cx="1332" cy="149" r="1.1"/><circle cx="1395" cy="55" r=".8"/>
+    <circle cx="1447" cy="260" r="1.3"/><circle cx="1511" cy="119" r="1"/><circle cx="1573" cy="303" r=".9"/><circle cx="1625" cy="183" r="1.4"/>
+    <circle cx="1692" cy="68" r=".8"/><circle cx="1751" cy="239" r="1.1"/><circle cx="1829" cy="143" r="1.3"/><circle cx="1882" cy="335" r=".9"/>
+  </g>
+  <g fill="#d8c7e1" opacity=".39">
+    <circle cx="368" cy="32" r=".7"/><circle cx="393" cy="59" r=".9"/><circle cx="447" cy="42" r=".6"/><circle cx="485" cy="83" r=".7"/>
+    <circle cx="541" cy="77" r=".8"/><circle cx="586" cy="110" r=".6"/><circle cx="639" cy="90" r=".8"/><circle cx="692" cy="129" r=".6"/>
+    <circle cx="741" cy="99" r=".7"/><circle cx="786" cy="145" r=".9"/><circle cx="832" cy="120" r=".6"/><circle cx="875" cy="147" r=".7"/>
+    <circle cx="932" cy="119" r=".7"/><circle cx="982" cy="156" r=".6"/><circle cx="1045" cy="137" r=".8"/><circle cx="1091" cy="177" r=".7"/>
+    <circle cx="1143" cy="151" r=".6"/><circle cx="1196" cy="199" r=".9"/><circle cx="1244" cy="177" r=".7"/><circle cx="1295" cy="220" r=".6"/>
+    <circle cx="1351" cy="197" r=".8"/><circle cx="1411" cy="245" r=".7"/><circle cx="1468" cy="228" r=".6"/><circle cx="1520" cy="280" r=".8"/>
+    <circle cx="1579" cy="263" r=".7"/><circle cx="1642" cy="309" r=".6"/><circle cx="1700" cy="294" r=".8"/><circle cx="1758" cy="347" r=".6"/>
+  </g>
+  <g class="art-moon" transform="translate(780 80)">
+    <circle r="100" fill="url(#moonGlow)"/><circle r="24" fill="#ded3d5"/><circle cx="-7" cy="-6" r="6" fill="#b9acbe" opacity=".14"/><circle cx="9" cy="6" r="4" fill="#b9acbe" opacity=".12"/>
+  </g>
+  </g>
+  <g class="woodland">
+  <path class="far-peaks" d="m0 448 89-62 42 11 89-80 42 34 46 12 68 73 66-86 69-43 39-58 50 75 35 22 41 67 79-43 42 22 67-114 31-14 57-88 46 74 54 38 38 100 98-52 38-56 36-12 68 72 41-41 38 39 68-71 41-73 39 27 32 5 68 83 37-11 58 64 53-102 51-39 17 48v278H0Z" fill="#5d596c"/>
+  <path class="mountains" d="m0 474 102-61 40-10 64-44 28 19 63 31 33-20 39-44 39-24 48-52 32 44 23 10 42 49 41 21 57-31 26-30 44-11 34-38 26 43 47 39 89-54 27-45 41-23 47-96 40 62 34 18 22 44 48 33 28 52 52-32 38-58 36-18 39-54 29 58 27 16 35 48 47 20 45-37 26-8 60-68 32 48 47 35 37-10 45-45 46-28 31-54 35 40 17 8 37 73 28 17 18 22v196H0Z" fill="url(#alpine-night)"/>
+  <path class="rock-shadow" d="M456 269 488 313 511 323 553 372 594 393 564 459 526 414 491 400 449 356 469 330Z M755 283 781 326 828 365 856 348 823 418 778 393 744 360 764 328Z M1032 147 1072 209 1106 227 1128 271 1176 304 1204 356 1230 340 1196 456 1140 388 1090 361 1063 329 1020 258 1040 228 1023 203Z M1369 194 1398 252 1425 268 1460 316 1507 336 1470 392 1413 344 1370 311 1381 275Z M1876 169 1911 209 1928 217 1920 386 1873 333 1849 301 1879 245Z" fill="#3c455a" opacity=".86"/>
+  <path class="rock-light" d="M330 389 369 345 408 321 456 269 432 342 392 370 378 414Z M828 365 917 311 944 266 985 243 1032 147 1008 243 976 271 955 311 920 333 865 421 819 428Z M1204 356 1256 324 1294 266 1330 248 1369 194 1339 278 1314 297 1281 344 1231 405Z M1507 336 1552 299 1578 291 1638 223 1609 307 1574 341 1530 389Z M1754 296 1799 251 1845 223 1876 169 1849 257 1818 297 1804 353Z" fill="#777688" opacity=".55"/>
+  <path class="snowpack" d="M369 345 408 321 456 269 488 313 511 323 534 350 506 347 487 329 478 334 466 313 456 337 440 327 424 348 409 341 382 353Z M677 332 721 321 755 283 781 326 799 342 777 337 766 323 753 336 744 322 721 342 706 336Z M917 311 944 266 985 243 1032 147 1072 209 1106 227 1128 271 1150 286 1119 281 1100 258 1083 257 1068 238 1056 249 1036 220 1026 255 1004 270 984 294 966 286 939 309Z M1256 324 1294 266 1330 248 1369 194 1398 252 1425 268 1442 292 1415 282 1397 265 1384 279 1370 247 1355 276 1337 267 1318 295 1292 296 1279 317Z M1552 299 1578 291 1638 223 1670 271 1694 289 1671 282 1651 264 1639 277 1628 261 1606 285 1591 285 1577 301Z M1799 251 1845 223 1876 169 1911 209 1920 213 1920 252 1904 240 1889 218 1877 238 1867 223 1849 252 1836 249 1815 262Z" fill="#b5b8c7"/>
+  <path class="snow-shadow" d="M456 269 488 313 511 323 534 350 506 347 487 329 478 334 466 313 456 337 461 311 449 317Z M755 283 781 326 799 342 777 337 766 323 753 336 762 311Z M1032 147 1072 209 1106 227 1128 271 1150 286 1119 281 1100 258 1083 257 1068 238 1056 249 1036 220 1026 255 1036 203 1026 209Z M1369 194 1398 252 1425 268 1442 292 1415 282 1397 265 1384 279 1370 247 1355 276 1368 230Z M1638 223 1670 271 1694 289 1671 282 1651 264 1639 277 1646 248Z M1876 169 1911 209 1920 213 1920 252 1904 240 1889 218 1877 238 1881 211 1871 222Z" fill="#838caa"/>
+  <path class="ridge" d="M0 521Q240 451 436 493T810 481Q1090 405 1310 492T1660 470Q1800 428 1920 451v629H0Z" fill="#41434f"/>
+  <g class="distant-firs" fill="#3c414b" opacity=".85">
+    <use xlink:href="#fir" x="795" y="407" width="30" height="76"/><use xlink:href="#fir" x="826" y="419" width="25" height="64"/><use xlink:href="#fir" x="856" y="400" width="32" height="82"/>
+    <use xlink:href="#fir" x="1160" y="439" width="26" height="66"/><use xlink:href="#fir" x="1190" y="424" width="34" height="86"/><use xlink:href="#fir" x="1230" y="449" width="27" height="68"/>
+    <use xlink:href="#fir" x="1480" y="421" width="36" height="91"/><use xlink:href="#fir" x="1522" y="432" width="27" height="69"/><use xlink:href="#fir" x="1554" y="399" width="39" height="99"/>
+    <use xlink:href="#fir" x="644" y="449" width="27" height="68"/><use xlink:href="#fir" x="681" y="433" width="33" height="83"/><use xlink:href="#fir" x="722" y="454" width="25" height="63"/>
+    <use xlink:href="#fir" x="900" y="426" width="28" height="71"/><use xlink:href="#fir" x="940" y="415" width="35" height="88"/><use xlink:href="#fir" x="984" y="432" width="26" height="66"/>
+    <use xlink:href="#fir" x="1284" y="456" width="26" height="65"/><use xlink:href="#fir" x="1322" y="443" width="30" height="76"/><use xlink:href="#fir" x="1614" y="425" width="35" height="88"/>
+  </g>
+  <path class="mist" d="M0 536Q260 493 506 544T986 520Q1208 471 1447 541T1920 504v576H0Z" fill="url(#mist)"/>
+  <use class="water" xlink:href="#lake-shape" fill="url(#water)"/>
+  <g clip-path="url(#lake-edge)">
+    <path d="M538 522q224 46 306 9t150-20l67 68 58-32 51 43 49-33 81 74 120-65 93 19 86-42 160-30 102-33v227H538Z" fill="url(#reflections)"/>
+    <path d="M0 536C205 492 344 509 525 548S829 563 991 517c180-46 334-26 462 14 140 44 281 12 467-31" fill="none" stroke="#dce3d5" stroke-width="3" opacity=".34"/>
+    <path d="M658 574c272 15 426-76 660-43 196 27-67 105-82 179-18 83 349 180 419 370h-179c-95-190-289-227-307-334-19-100 215-151 180-182-68-54-383 33-691 10Z" fill="#e8dec9" opacity=".15"/>
+    <rect x="0" y="500" width="1920" height="580" fill="url(#lake-ripples)"/>
+    <g fill="none" stroke="#e3ede6" stroke-linecap="round">
+      <path d="M695 566q68 3 137-3m132-23 106-9m36 25q49-4 92-4m22 22q35 1 66-1m-5 51 120-2m-127 40q49 2 94-1m-223 50q77 4 150 0m11 82q69 4 139-1m-229 47 142-1m-121 90q100 3 220 0" opacity=".37"/>
+      <path d="M953 569q116-14 219-15m-8 34 145-2m-39 24 57-1m-112 70q53 2 118-1m-183 75q52 4 111 0m26 62q104 4 211-1m-278 94q62 3 152-1" stroke-width="1.8" opacity=".28"/>
+    </g>
+  </g>
+  <path class="bank-left" d="M0 594Q300 515 554 571T1000 556Q1120 538 1280 556l-118 46-184 57-249 26L0 727Z" fill="#2b353e"/>
+  <path class="bank-right" d="M1920 542q-231-33-442 15l-86 43-120 42 226 55 422 38Z" fill="#303a43"/>
+  <path class="shore-left" d="M0 678q250-102 463-44c171 49 322 36 491 13 55 20 149 49 206 97-81 46-149 107-179 145l72 191H0Z" fill="#202c34"/>
+  <path class="shore-right" d="m1920 631-216-34c-102 42-263 103-369 149 59 22 104 62 143 91-40 30-59 66-78 88 55 47 120 98 166 155h354Z" fill="#26313a"/>
+  <g fill="none" stroke="#bcd3c7" stroke-linecap="round">
+    <path d="M963 650c54 17 136 44 178 81m-76 73c-40 27-67 52-83 74m386-136c40-17 91-39 138-58m-97 100c23 14 45 30 63 48" opacity=".27"/>
+    <path d="M992 662c47 16 97 31 126 56m280 246c17 17 42 36 77 63m-343 32c-49-75-84-130-105-165" opacity=".12"/>
+  </g>
+  <g class="firs" fill="#1e2932"><use xlink:href="#fir" x="88" y="358" width="142" height="356"/><use xlink:href="#fir" x="228" y="455" width="105" height="263"/><use xlink:href="#fir" x="408" y="489" width="91" height="229"/><use xlink:href="#fir" x="1665" y="345" width="153" height="384"/><use xlink:href="#fir" x="1790" y="434" width="120" height="301"/></g>
+  <g class="near-firs" fill="#17232c"><use xlink:href="#fir" x="-40" y="340" width="190" height="478"/><use xlink:href="#fir" x="1866" y="290" width="187" height="470"/><use xlink:href="#fir" x="1580" y="573" width="126" height="317"/></g>
+  <g class="mid-firs" fill="#23303a"><use xlink:href="#fir" x="341" y="474" width="84" height="211"/><use xlink:href="#fir" x="1515" y="536" width="81" height="204"/><use xlink:href="#fir" x="1744" y="470" width="82" height="206"/></g>
+  <path class="foreground-left" d="M0 883q289-132 565-39t573 236H0Z" fill="#16222b"/><path class="foreground-right" d="M1920 904q-235-101-451 31l-158 145h609Z" fill="#19252e"/>
+  </g>
+  <g class="fireflies">
+    <g class="fly"><circle cx="782" cy="551" r="11" fill="url(#firelight)"/><circle cx="782" cy="551" r="1.5" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="922" cy="596" r="9" fill="url(#firelight)"/><circle cx="922" cy="596" r="1.2" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="1059" cy="570" r="10" fill="url(#firelight)"/><circle cx="1059" cy="570" r="1.4" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="1174" cy="614" r="12" fill="url(#firelight)"/><circle cx="1174" cy="614" r="1.6" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="1502" cy="541" r="9" fill="url(#firelight)"/><circle cx="1502" cy="541" r="1.2" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="1644" cy="582" r="11" fill="url(#firelight)"/><circle cx="1644" cy="582" r="1.5" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="1753" cy="523" r="10" fill="url(#firelight)"/><circle cx="1753" cy="523" r="1.3" fill="#e9dc9c"/></g>
+    <g class="fly"><circle cx="1446" cy="690" r="12" fill="url(#firelight)"/><circle cx="1446" cy="690" r="1.6" fill="#e9dc9c"/></g>
+  </g>
+</svg>

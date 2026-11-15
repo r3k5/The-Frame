@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
+  <!-- Repeatable diagonal rain tile for the precipitation layer. -->
+  <g stroke="#c4e0ef" stroke-linecap="round">
+    <path d="M17 5l-5 18m61-3-8 28m58-17-5 17m43-43-6 22m54-8-4 15M27 73l-7 23m63-23-4 14m55-25-8 28m58-29-5 18m57 4-6 20M50 121l-8 28m52-38-5 16m60-12-5 19m60-13-8 28M19 161l-6 23m57-6-5 18m47-44-6 19m60 5-5 20m60-22-6 21M115 195l-5 19m91-12-4 13" opacity=".43"/>
+    <path d="M36 32l-7 25m156-14-6 22m-89 83-7 23m150-58-8 29M40 190l-6 23m147-15-6 20" stroke-width="1.6" opacity=".64"/>
+  </g>
+</svg>

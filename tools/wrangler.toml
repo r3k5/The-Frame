@@ -1,0 +1,8 @@
+# Set portfolio credentials with Worker secrets before serving data.
+name = "r3k5-frame-portfolio"
+main = "portfolio-worker.mjs"
+compatibility_date = "2026-11-14"
+compatibility_flags = ["nodejs_compat"]
+# Use the account Workers hostname for the paired display endpoint.
+workers_dev = true
+preview_urls = false

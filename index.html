@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1920">
+  <!-- Allow the providers used by the app. The private build adds its portfolio origin. -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' file: data: https://tvpnlogopus.samsungcloud.tv; style-src 'self'; script-src 'self'; connect-src 'self' https://api.open-meteo.com https://api.zippopotam.us https://i.mjh.nz https://raw.githubusercontent.com https://*.akamaized.net; media-src 'self' blob:; worker-src 'self' blob:; frame-src https://www.tradingview-widget.com https://www.youtube.com https://www.youtube-nocookie.com; object-src 'none'; base-uri 'none'">
+  <title>Frame — R3K5 Edition</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="edition.css">
+</head>
+<body>
+  <div id="startup-splash" class="startup-splash">
+    <div class="startup-wordmark"><span class="frame-mark" aria-hidden="true"></span>Frame</div>
+    <progress id="startup-progress" aria-label="Loading Home" max="5" value="0"></progress>
+  </div>
+  <div id="stage" data-page="home" aria-hidden="true">
+    <!-- Select the saved theme and start loading the backdrop before building Home. -->
+    <script src="js/preferences.js"></script>
+    <script src="js/launcher-config.js"></script>
+    <script src="js/platform.js"></script>
+    <script src="js/woodland-display.js"></script>
+    <div id="landscape" class="landscape">
+      <!-- Separate the backdrop, sky, and wildlife for weather and daylight changes. -->
+      <div class="woodland-transition" aria-hidden="true"></div>
+      <svg class="woodland-celestial" viewBox="0 0 1920 1080" aria-hidden="true">
+        <defs>
+          <clipPath id="woodland-horizon">
+            <path d="M550 0H930V210L895 264 864 278 818 357 781 326 755 283 721 321 677 332 651 362 646 365 635 346 600 324 550 249Z"/>
+          </clipPath>
+          <radialGradient id="woodland-sun-halo">
+            <stop stop-color="#ffe4a5" stop-opacity=".86"/><stop offset=".45" stop-color="#fbc763" stop-opacity=".49"/><stop offset="1" stop-color="#fbc763" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="woodland-sun-disk" cx="39%" cy="30%" r="70%">
+            <stop stop-color="#fff5c7"/><stop offset=".65" stop-color="#ffe297"/><stop offset="1" stop-color="#ffc463"/>
+          </radialGradient>
+          <radialGradient id="woodland-moon-halo">
+            <stop stop-color="#d5c3dd" stop-opacity=".19"/><stop offset="1" stop-color="#d5c3dd" stop-opacity="0"/>
+          </radialGradient>
+          <radialGradient id="woodland-veiled-moon">
+            <stop stop-color="#d5cbdf" stop-opacity=".48"/><stop offset=".3" stop-color="#c9bdd8" stop-opacity=".33"/>
+            <stop offset=".67" stop-color="#9ba5bd" stop-opacity=".13"/><stop offset="1" stop-color="#9ba5bd" stop-opacity="0"/>
+          </radialGradient>
+        </defs>
+        <g clip-path="url(#woodland-horizon)">
+          <g class="woodland-sun">
+            <g class="celestial-glow">
+              <circle r="89" fill="url(#woodland-sun-halo)"/>
+              <path class="sun-rays" d="M0-48v-13m0 109v13m-48-61h-13m109 0h13M-34-34l-9-9m77 77 9 9m-77-9-9 9m77-77 9-9" fill="none" stroke="#ffe2a0" stroke-width="2.5" stroke-linecap="round" opacity=".86"/>
+            </g>
+            <circle class="sun-disk" r="30" fill="url(#woodland-sun-disk)"/>
+          </g>
+          <g class="woodland-moon">
+            <g class="celestial-glow">
+              <circle class="moon-halo" r="100" fill="url(#woodland-moon-halo)"/>
+              <ellipse class="veiled-moon" rx="120" ry="64" fill="url(#woodland-veiled-moon)"/>
+            </g>
+            <g class="moon-disk">
+              <circle r="24" fill="#ded3d5"/><circle cx="-7" cy="-6" r="6" fill="#b9acbe" opacity=".14"/><circle cx="9" cy="6" r="4" fill="#b9acbe" opacity=".12"/>
+            </g>
+          </g>
+        </g>
+      </svg>
+      <svg class="woodland-fireflies" viewBox="0 0 1920 1080" aria-hidden="true">
+        <defs>
+          <radialGradient id="woodland-firefly-halo">
+            <stop stop-color="#ffe5a4" stop-opacity=".76"/><stop offset=".32" stop-color="#edcf7e" stop-opacity=".37"/><stop offset="1" stop-color="#edcf7e" stop-opacity="0"/>
+          </radialGradient>
+          <g id="woodland-firefly">
+            <circle r="15" fill="url(#woodland-firefly-halo)"/><circle r="2.25" fill="#ffefb0"/>
+          </g>
+        </defs>
+        <g transform="translate(782 551)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(922 596)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1059 570)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1174 614)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1502 541)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1644 582)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1753 523)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1446 690)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(478 702)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(621 558)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(705 637)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(839 533)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(867 662)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(976 725)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1107 679)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1187 537)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1250 635)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1305 579)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1530 709)"><use href="#woodland-firefly"/></g>
+        <g transform="translate(1795 727)"><use href="#woodland-firefly"/></g>
+      </svg>
+      <span class="woodland-fish" data-water="upper" aria-hidden="true"></span>
+      <span class="woodland-fish" data-water="middle" aria-hidden="true"></span>
+      <span class="woodland-fish" data-water="foreground" aria-hidden="true"></span>
+      <!-- Weather attributes determine which effects appear here. -->
+      <div class="woodland-weather" aria-hidden="true">
+        <div class="woodland-clouds"></div>
+        <div class="woodland-storm-light"></div>
+        <div class="woodland-snow-cover"></div>
+        <div class="woodland-precipitation"></div>
+        <svg class="woodland-leaves" viewBox="0 0 1920 1080">
+          <defs>
+            <g id="woodland-autumn-leaf">
+              <path d="M3 7C-4 7-8 4-11-3l5 1-2-6 5 3 1-7 4 5 5-5-1 6 6-1C10 1 8 5 3 7Z" fill="currentColor"/>
+              <path d="M6 10 0 0-2-6M1 1l5-4M2 3l-7-2" fill="none" stroke="#653826" stroke-width="1" stroke-linecap="round"/>
+            </g>
+          </defs>
+          <g transform="translate(-40 219)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 270)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 315)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 372)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 416)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 470)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 534)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 581)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 631)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 697)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 751)"><use href="#woodland-autumn-leaf"/></g>
+          <g transform="translate(-40 809)"><use href="#woodland-autumn-leaf"/></g>
+        </svg>
+      </div>
+      <!-- Place the fox between two tree layers so the pines can cover it. -->
+      <div class="woodland-foreground" aria-hidden="true">
+        <svg class="woodland-layer" viewBox="478 490 604 280">
+          <path d="M501 697c76-6 133-7 201 0 65 6 107 10 168 4 68-7 95-11 165-9l-4 9c-73 1-99 5-160 13-80 9-131 1-206-7-57-6-103-5-158 2Z" fill="#63816a" opacity=".32"/>
+          <path d="m616 702-2-5 6 5m49 13 1-5 3 5m216 1 3-5 1 5m24-21 4-5 2 4" fill="none" stroke="#5c7d68" stroke-width="1.5" stroke-linecap="round" opacity=".65"/>
+        </svg>
+        <div class="woodland-fox">
+        <div class="fox-body">
+        <svg viewBox="0 0 96 54">
+          <ellipse cx="53" cy="50" rx="31" ry="3" fill="#142d29" opacity=".54"/>
+          <g class="fox-stride">
+            <path class="fox-far-leg" d="m42 31-8 14-9 3m43-18 9 13 8 1"/>
+            <path d="M47 28C30 41 10 37 2 22c12 5 26 2 32 0 5-2 9-1 13 6Z" fill="#a94f2b"/>
+            <path d="M2 22c6 2 11 3 17 2l-6 10C8 31 4 27 2 22Z" fill="#efdfbc"/>
+            <path d="M30 24c7-7 17-7 27-5l11 1 5-9 2-9 8 9 6 4 6 2-1 6-9 3-12-1-9 12c-9 4-24 2-29-2-4-2-6-8-5-11Z" fill="#cb6735"/>
+            <path d="m89 18 6 2-1 3-9 3-11-1-10 12-9 1 11-13 17-4Z" fill="#f2dfb8"/>
+            <path d="m75 3 3 9-6 1Z" fill="#884931"/>
+            <path d="m91 17 4 1v3l-3-1Z" fill="#2b2826"/>
+            <circle cx="85" cy="16" r="1.4" fill="#342622"/>
+            <path class="fox-near-leg" d="m39 33 1 11 9 5m17-17-4 10 7 7"/>
+            <g class="fox-fish">
+              <path d="M91 21c-6 4-7 11-2 18l-2 6 7-3 2 1-2-5c4-6 1-13-3-17Z" fill="#a9cbd1"/>
+              <path d="M91 24q3 8-1 13m-1-8 5 1" fill="none" stroke="#688e9a" stroke-width="1.2" stroke-linecap="round"/>
+              <circle cx="91" cy="25" r=".85" fill="#284552"/>
+            </g>
+          </g>
+        </svg>
+        </div>
+        </div>
+        <svg class="woodland-layer" viewBox="478 490 604 280">
+        <!-- Foreground pine boughs cover the fox as it enters and leaves the trail. -->
+        <g class="path-pine" fill="#21463b">
+          <path d="m544 674-1 52-13 8 21-3 10 4 3-60Z"/>
+          <path d="M552 528q8 27 26 53l-12-4q6 17 26 35l-16-3q11 28 28 44l-16-4q30 15 42 49l-10-5 5 11-16-2q-14 7-31 5l-12 8-16-7-16 5-13-6-14 4-19-6q19-24 34-51l-17 6q17-24 27-52l-16 5q17-18 23-39l-10 4q16-25 23-50Z"/>
+          <path d="m981 669 1 63-13 9 23-4 14 4-8-8 1-66Z"/>
+          <path d="M986 517q10 27 32 54l-12-3q9 23 23 39l-16-3q12 26 28 45l-18-3q16 31 36 54l-16-3-19 12-17-3-18 9-12-7-20 4-11-4-25 6q22-36 35-63l-19 4q18-25 29-51l-14 2q12-16 21-40l-12 4q18-26 25-53Z"/>
+        </g>
+        <g class="path-pine-light" fill="#2b5447">
+          <path d="M552 528q-5 27-23 50l12-7q-6 20-22 40l16-7q-7 25-25 48l20-8q-12 29-31 54l20-5 10 3 12-7-5-8 11-34-9 4 13-43-8 4 11-37-6 4Z"/>
+          <path d="M986 517q-7 28-24 53l13-7q-9 24-22 42l16-7q-12 27-28 53l20-8q-13 32-34 61l20-7 11 3 13-8-5-9 16-43-9 3 14-44-9 6 9-39-6 5Z"/>
+        </g>
+        <g fill="none" stroke="#95b294" stroke-opacity=".24" stroke-linecap="round">
+          <path d="m547 570-10 14m11 16-18 21m21-1 17 16m-25 5-13 16m19 11 22 14m-36-10-18 13m469-122-12 15m9 11-18 25m19-4 18 16m-30 15-15 17m28-8 21 18m-33 10-19 13m40-8 25 13"/>
+        </g>
+        <g class="woodland-pine-snow" fill="#c3d9d7">
+          <path d="m552 528-22 46 14-8 10 4 9-6 8 9Zm-21 68-13 15 14-5 13 3 10-6 8 3 12 2-13-18-7 7-9-3Zm-16 44-9 20 17-5 15 2 8-7 16 2 13-6 14 2-10-15-10 5-12-3-17 7-13-3Z"/>
+          <path d="m986 517-22 49 14-7 8 3 10-7 12 11Zm-24 74-11 16 16-5 14 2 12-9 14 4 12-1-15-18-13 7-13-2Zm-16 36-12 29 18-6 18 4 13-9 16 3 13-5 16 6-14-26-9 7-17-3-17 7-10-4Z"/>
+        </g>
+        <g class="woodland-owl">
+          <path d="M984 627q20-10 48-6l13-7m-21 7 11 11" fill="none" stroke="#293139" stroke-width="7" stroke-linecap="round"/>
+          <g transform="translate(1009 583) scale(.86)">
+            <path d="m-10 34-4 11m3-5-5 3m26-9 4 11m-3-5 5 3" fill="none" stroke="#bd9d83" stroke-width="3" stroke-linecap="round"/>
+            <ellipse cy="8" rx="24" ry="31" fill="#9b8b9d"/>
+            <ellipse cy="12" rx="16" ry="24" fill="#c6b7bd"/>
+            <path d="M-22-1q-8 24 3 34l6-20Zm44 0q8 24-3 34l-6-20Z" fill="#756b82"/>
+            <path d="m-25-34 2-16 14 10q9-4 18 0l14-10 2 16q6 29-25 31-31-2-25-31Z" fill="#a496a7"/>
+            <path d="M0-31q-20-17-23 0-1 17 23 23 24-6 23-23-3-17-23 0Z" fill="#e2d5ce"/>
+            <g class="owl-eyes-open">
+              <circle cx="-10" cy="-25" r="8.3" fill="#ad925f"/><circle cx="10" cy="-25" r="8.3" fill="#ad925f"/>
+              <circle cx="-10" cy="-25" r="5.6" fill="#262937"/><circle cx="10" cy="-25" r="5.6" fill="#262937"/>
+              <circle cx="-11.8" cy="-27" r="2" fill="#f7eee5"/><circle cx="8.2" cy="-27" r="2" fill="#f7eee5"/>
+            </g>
+            <path class="owl-eyes-closed" d="M-16-25q6 6 12 0m8 0q6 6 12 0" fill="none" stroke="#554b57" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="m-4-15 4 7 4-7Z" fill="#c29a78"/>
+            <path d="m-8 9 3 3 3-3m5 0 3 3 3-3m-10 10 3 3 3-3" fill="none" stroke="#a796a7" stroke-width="1.5" stroke-linecap="round"/>
+          </g>
+        </g>
+        </svg>
+      </div>
+      <!-- The campsite stays visible while the flame follows the weather. -->
+      <div class="woodland-camp" aria-hidden="true">
+        <svg viewBox="0 0 217 82">
+          <defs>
+            <radialGradient id="campfire-glow">
+              <stop stop-color="#ffaf61" stop-opacity=".45"/><stop offset="1" stop-color="#ed852b" stop-opacity="0"/>
+            </radialGradient>
+            <linearGradient id="camp-log-bark" x2="0" y2="1">
+              <stop stop-color="#b7814e"/><stop offset=".33" stop-color="#96633d"/>
+              <stop offset="1" stop-color="#573729"/>
+            </linearGradient>
+            <g id="camp-firewood-piece">
+              <path d="m0 0 12 1 4 2-4 4L0 5Q-2 3 0 0Z" fill="#754d35"/>
+              <path d="m1 1 11 1 1 2L1 3Z" fill="#9a6d45"/>
+              <path d="m12 1 4 2-4 4-2-2Z" fill="#c49966" stroke="#754d35" stroke-width=".7"/>
+              <path d="m12 5 2-2" stroke="#9b6946" stroke-width=".65" stroke-linecap="round"/>
+            </g>
+          </defs>
+          <ellipse cx="83" cy="70" rx="74" ry="9" fill="#172625" opacity=".53"/>
+          <ellipse class="camp-light" cx="126" cy="53" rx="41" ry="28" fill="url(#campfire-glow)"/>
+          <g transform="translate(129 0) scale(-1 1)">
+            <g fill="none" stroke="#a99b75" stroke-width="1" opacity=".72">
+              <path d="m32 26-20 37m96-9 9 13M12 63v5m105-1v4"/>
+            </g>
+            <path class="tent-side" d="M42 22 87 28l22 34-57 5-32-7Z" fill="#9b794e"/>
+            <path class="tent-front" d="M42 22 20 60l32 7 13-10Z" fill="#c09a65"/>
+            <path class="tent-door" d="m42 29-14 32 18 4 9-6Z" fill="#53443d"/>
+            <path class="tent-seam" d="m42 22 13 38 54 2M44 28l43 5m2 5 11 17" fill="none" stroke="#dfbd86" stroke-width="1.2" opacity=".55"/>
+          </g>
+          <g class="camp-firewood">
+            <ellipse cx="24" cy="73" rx="16" ry="3.5" fill="#172625" opacity=".64"/>
+            <use href="#camp-firewood-piece" transform="translate(23 65) rotate(6)"/>
+            <use href="#camp-firewood-piece" transform="translate(10 67) rotate(4)"/>
+            <use href="#camp-firewood-piece" transform="translate(17 61) rotate(8)"/>
+          </g>
+          <path d="m111 68 6-4 13-1 11 4 3 4-6 4-20 1-8-3Z" fill="#5d665e"/>
+          <path d="m117 71 16-7m-12-1 13 8" fill="none" stroke="#482e24" stroke-width="3.5" stroke-linecap="round"/>
+          <g class="camp-light camp-flame">
+            <path d="M127 68c-10 0-13-8-7-15 0 4 2 5 3 4 2-5-2-9 4-17-1 6 2 8 4 12l3-5c5 9 3 20-7 21Z" fill="#ec8540"/>
+            <path d="M128 66c-5 0-5-5-1-9 1-1 1-3 1-4 5 5 6 12 0 13Z" fill="#ffe1a0"/>
+          </g>
+          <g class="camp-roasting-stick" transform="translate(134 50) rotate(-29)">
+            <path d="M0-2 1 25" stroke="#a0825d" stroke-width="1.6" stroke-linecap="round"/>
+            <rect x="-3.7" y="-5" width="7.4" height="7.4" rx="2" fill="#f4dec1"/>
+            <path d="M-2 1.3c1 .7 3 .7 4 .2" fill="none" stroke="#be8353" stroke-width="1.1" stroke-linecap="round"/>
+          </g>
+          <g class="camp-sitting-log" transform="translate(-10 -9)">
+            <path d="M165 56c9-2 38 12 44 19 7 8-9 7-20 1-10-5-30-16-24-20Z" fill="#172625" opacity=".68"/>
+            <path d="M169 48c9 1 24 8 36 13 7 3 2 16-7 16-8-4-20-12-30-18-6-4-5-11 1-11Z" fill="url(#camp-log-bark)" stroke="#583828" stroke-width="1"/>
+            <path d="M166 51c5-4 21 5 37 12l-4 2c-6-5-15-7-21-10-5-2-9-4-12-4Z" fill="#b7814e" opacity=".78"/>
+            <g fill="none" stroke-linecap="round">
+              <path d="M167 54c8 1 11 4 17 6l14 8m-26-9c6 2 11 7 23 13m-13-16 10 4" stroke="#67432e" stroke-width="1.05"/>
+              <path d="m175 57 10 5 11 6m-16-4 10 7" stroke="#b8814d" stroke-width=".7" opacity=".68"/>
+            </g>
+            <g transform="translate(201 69) rotate(25)">
+              <path d="M0-8.7c4 0 6.7 3.9 6.5 8.7-.2 5.3-2.8 8.5-6.5 8.7-4 .2-6.8-3.4-6.7-8.7.1-5 2.9-8.7 6.7-8.7Z" fill="#956137" stroke="#573729" stroke-width="1.05"/>
+              <ellipse rx="4.8" ry="6.7" fill="#d2a56c"/>
+              <path d="M1.8-4.3c-3.6-1.9-5.2 2.4-4.6 5.1.5 3.3 3.9 4.3 5.2 1.5m-1.7-4.3c-1.9-1-2.6 2.8-1 3.4 1 .3 1.7-.7 1.3-1.5" fill="none" stroke="#a77449" stroke-width=".7" stroke-linecap="round"/>
+            </g>
+          </g>
+        </svg>
+      </div>
+      <span class="woodland-eyes foreground-eyes" aria-hidden="true"></span>
+      <span class="woodland-eyes distant-eyes" aria-hidden="true"></span>
+      <span class="woodland-eyes extra-eyes campsite-eyes" aria-hidden="true"></span>
+      <span class="woodland-eyes extra-eyes trail-eyes" aria-hidden="true"></span>
+      <span class="woodland-eyes extra-eyes ridge-eyes" aria-hidden="true"></span>
+      <span class="woodland-eyes extra-eyes riverbank-eyes" aria-hidden="true"></span>
+      <div class="woodland-bat" aria-hidden="true">
+        <svg viewBox="0 0 64 32">
+          <path class="bat-wing" d="M32 13C23 13 20 8 14 6L1 2c3 5 4 11 3 16 4-4 9-2 11 4 5-4 9-3 14 3l3-6Z"/>
+          <g transform="translate(64 0) scale(-1 1)">
+            <path class="bat-wing" d="M32 13C23 13 20 8 14 6L1 2c3 5 4 11 3 16 4-4 9-2 11 4 5-4 9-3 14 3l3-6Z"/>
+          </g>
+          <path d="m27 15 1-7 3 3h2l3-3 1 7c2 3-1 9-3 12l-2 3-2-3c-2-3-5-9-3-12Z"/>
+        </svg>
+      </div>
+    </div>
+    <div class="shade"></div>
+    <!-- The wordmark is static. Buttons provide the header’s remote controls. -->
+    <header>
+      <div class="brand"><span class="frame-mark" aria-hidden="true"></span>Frame<span class="brand-note">R3K5 Edition<span>Office</span></span></div>
+      <nav aria-label="Main navigation">
+        <button data-nav="home" class="nav active">Home</button>
+        <button data-nav="markets" class="nav">Markets</button>
+        <button data-nav="apps" class="nav">Apps</button>
+        <button data-nav="art" class="nav">Art</button>
+        <button data-nav="inputs" class="nav">Inputs</button>
+      </nav>
+      <button id="settings" class="icon-button" aria-label="Settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 3-1 3-3 1-2 3 2 2-1 3 3 2 3-1 2 2 3-1 1-3 3-1 1-3-2-2 1-3-3-2-3 1-2-2Z"/><circle cx="11" cy="10" r="3"/></svg></button>
+      <button id="weather" class="weather-summary" aria-label="Local weather">
+        <svg id="weather-icon" class="weather-icon" viewBox="0 0 40 40" aria-hidden="true" hidden>
+          <g class="weather-sun" fill="none" stroke="#f4d792" stroke-width="2.1" stroke-linecap="round">
+            <circle cx="20" cy="20" r="7" fill="#f4d792"/>
+            <path d="M20 5v4m0 22v4M5 20h4m22 0h4M9.4 9.4l2.7 2.7m15.8 15.8 2.7 2.7m0-21.2-2.7 2.7M12.1 27.9l-2.7 2.7"/>
+          </g>
+          <path class="weather-moon" fill="#ede1b7" d="M31 25A13 13 0 0 1 15 9a13 13 0 1 0 16 16Z"/>
+          <path class="weather-cloud" fill="#e0e8ec" d="M11 26a5.5 5.5 0 0 1-.5-11 8 8 0 0 1 15-2 6.6 6.6 0 1 1 3.7 13Z"/>
+          <g class="weather-rain" stroke="#9bd7f7" stroke-width="2" stroke-linecap="round">
+            <path d="m12 29-2 4"/><path d="m21 29-2 4"/><path d="m30 29-2 4"/>
+          </g>
+          <g class="weather-snow" fill="#e0f1f8"><circle cx="12" cy="31" r="1.7"/><circle cx="20" cy="34" r="1.7"/><circle cx="28" cy="30" r="1.7"/></g>
+          <path class="weather-fog" d="M7 27h23m-18 5h22m-25 5h19" fill="none" stroke="#c3d6db" stroke-width="2" stroke-linecap="round"/>
+          <path class="weather-bolt" fill="#ffe294" d="m21 22-7 10h5l-3 7 11-12h-6l3-5Z"/>
+        </svg>
+        <span><span id="weather-place">Local Weather</span><span id="weather-value">Loading weather…</span></span>
+      </button>
+      <div class="time-block"><time id="clock"></time><div id="date"></div></div>
+    </header>
+    <!-- Screen content renders here. Dialogs and the focus ring sit above it. -->
+    <main id="content"></main>
+    <button id="version-history" class="version-history" aria-label="Version history"></button>
+    <button id="end-scene-review" class="text-button" hidden>End scene review · Back</button>
+    <div id="woodland-caption" hidden><span>Woodland</span><button id="leave-woodland">Back <span>↩</span></button></div>
+    <div id="modal-layer" hidden><section id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title"></section></div>
+    <div id="toast" role="status" aria-live="polite" hidden></div>
+    <div id="focus-ring" aria-hidden="true" hidden></div>
+  </div>
+  <!-- Load shared controls and services before starting the app. -->
+  <script defer src="js/ui.js"></script>
+  <script defer src="js/weather.js"></script>
+  <script defer src="js/preview.js"></script>
+  <script defer src="js/live-guide.js"></script>
+  <script defer src="js/live-sources.js"></script>
+  <script defer src="js/live-thumbnail.js"></script>
+  <script defer src="js/portfolio-config.js"></script>
+  <script defer src="js/portfolio.js"></script>
+  <script defer src="js/version.js"></script>
+  <script defer src="js/remote-focus.js"></script>
+  <script defer src="js/woodland-fish.js"></script>
+  <script defer src="js/home-market.js"></script>
+  <script defer src="js/startup.js"></script>
+  <script defer src="js/app.js"></script>
+</body>
+</html>

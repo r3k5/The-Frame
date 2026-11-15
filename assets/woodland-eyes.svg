@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 40 16">
+  <!-- A pair of illuminated eyes for the dark pines. -->
+  <defs>
+    <radialGradient id="halo">
+      <stop stop-color="#f8a028" stop-opacity=".56"/>
+      <stop offset="1" stop-color="#eb8c19" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="amber" cx=".55" cy=".43" r=".67">
+      <stop stop-color="#fff5a1"/>
+      <stop offset=".43" stop-color="#ffdc59"/>
+      <stop offset=".78" stop-color="#eda12a"/>
+      <stop offset="1" stop-color="#cf6716"/>
+    </radialGradient>
+  </defs>
+  <g id="eye">
+    <ellipse cx="10.5" cy="7.4" rx="10.2" ry="5.5" fill="url(#halo)" transform="rotate(19 10.5 7.4)"/>
+    <path d="M2.4 3.7C8.5 2.6 14 5.4 17.7 11.1 10.7 11.7 5.2 8.6 2.4 3.7Z" fill="url(#amber)"/>
+    <path d="M6.3 5.4c3.2-.1 6.1 1.5 8 3.8-3.5-.5-6.2-1.9-8-3.8Z" fill="#fff6ac" opacity=".58"/>
+  </g>
+  <use xlink:href="#eye" transform="translate(40 0) scale(-1 1)"/>
+</svg>
